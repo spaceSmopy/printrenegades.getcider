@@ -1,0 +1,271 @@
+/* Header layout
+========================================================================== */
+
+.header-cont{
+	padding: 10px 15px;
+	background: rgba(255, 255, 255, .9);
+	box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3);
+}
+
+.site-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	@media(max-width: $screen-md - $screen-diff){
+		justify-content: space-between;
+	}
+}
+
+.site-branding {
+	max-width: 400px;
+	display: flex;
+	align-items: center;
+
+	.site-title,
+	.site-description {
+		margin: 0;
+	}
+
+	.details{
+		margin-left: 15px;
+		@media(max-width: $screen-xs - $screen-diff){
+			margin-left: 10px;
+		}
+		.title{
+			font-size: 24px;
+			font-family: $font-family-bold;
+			color: $cs-green;
+			&:hover{
+				color: $cs-green-dark;
+			}
+			@media(max-width: $screen-md - $screen-diff){
+				font-size: 20px;
+			}
+			@media(max-width: $screen-xs - $screen-diff){
+				font-size: 16px;
+			}
+		}
+		.tel{
+			font-size: 15px;
+			font-family: $font-family-medium;
+			color: $gray-dark;
+			letter-spacing: -.4px;
+			display: block;
+			text-align: center;
+			@media(max-width: $screen-md - $screen-diff){
+				text-align: left;
+			}
+		}
+	}
+
+}
+
+.custom-logo-link {
+	display: block;
+	img{
+		width: 83px;
+		vertical-align: middle;
+		@media(max-width: $screen-xs - $screen-diff){
+			width: 70px;
+		}
+	}
+}
+
+/* Main Menu
+========================================================================== */
+
+.site-navigation {
+	grid-area: nav-menu;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-grow: 1;
+
+	@media(max-width: $screen-md - $screen-diff){
+		align-items: flex-start;
+		width: 200px;
+		height: 100vh;
+		position: fixed;
+		z-index: 1000;
+		right: -200px;
+		background: $white;
+		transition: $transition-delay;
+
+		&.opened-menu{
+			right: 0;
+			box-shadow: -10px 5px 5px 0 rgba(0,0,0,.2);
+		}
+
+		.menu-header-menu-container{
+			width: 100%;
+		}
+	}
+
+	ul.menu, ul.menu ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	ul.menu {
+		display: flex;
+		flex-wrap: wrap;
+		@media(max-width: $screen-md - $screen-diff){
+			flex-direction: column;
+		}
+
+		li {
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			a {
+				display: block;
+				padding: 8px 15px;
+				font-size: 15px;
+				color: $gray-dark;
+				&:hover{
+					color: $cs-green;
+				}
+				@media(max-width: $screen-md - $screen-diff){
+					width: 100%;
+				}
+			}
+
+			&.current_page_item{
+				a{
+					color: $cs-green;
+				}
+			}
+
+			&.menu-item-has-children {
+				padding-right: 15px;
+
+				&:after {
+					display: block;
+					content: '\25BE';
+					font-size: 1.5em;
+					align-items: center;
+					color: $gray;
+				}
+			}
+
+			&.quote-btn{
+				a{
+					padding: 10px 20px;
+					color: #fff;
+					margin-left: 15px;
+					background: $cs-green;
+					&:hover{
+						color: #fff;
+						background: $cs-green-md;
+					}
+					@media(max-width: $screen-md - $screen-diff){
+						margin: 15px 15px 0;
+						text-align: center;
+					}
+				}
+			}
+
+			ul {
+				background: #fff;
+				display: none;
+				min-width: 150px;
+				position: absolute;
+				z-index: 2;
+				left: 0;
+				top: 100%;
+				border: $gray-lighter 1px solid;
+
+				li.menu-item-has-children {
+					a {
+						flex-grow: 1;
+					}
+
+					&:after {
+						transform: rotate(-90deg);
+					}
+				}
+
+				ul {
+					left: 100%;
+					top: 0;
+				}
+			}
+
+			&:hover {
+				& > ul {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.mobile-handler{
+	cursor: pointer;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@media(min-width: $screen-md){
+		display: none;
+	}
+	@media(max-width: $screen-md - $screen-diff){
+		&.active{
+			span{
+				background: $cs-green;
+			}
+		}
+	}
+	span{
+		width: 30px;
+		height: 3px;
+		background: #999;
+		margin-top: 6px;
+		transition: $transition-delay;
+		&:first-of-type{
+			margin-top: 0;
+		}
+	}
+}
+
+.breadcrumbs {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 70px 0;
+
+	.container {
+		position: relative;
+    	z-index: 1;
+	}
+	
+	h1.breadcrumbs-custom-title {
+		color: $white;
+		font-size: 48px;
+		line-height: 50px;
+		font-family: $font-family-medium;
+		text-transform: uppercase;
+		z-index: 2;
+		
+		@media(max-width: $screen-md - $screen-diff){
+			font-size: 34px;
+		}
+		@media(max-width: $screen-sm - $screen-diff){
+			font-size: 28px;
+			line-height: 35px;
+		}
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		background: rgba(112, 112, 112, 0.8);
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+}

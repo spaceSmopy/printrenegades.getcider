@@ -1,0 +1,67 @@
+@mixin header-text{
+	font-size: 18px;
+	line-height: 30px;
+	color: $white;
+	text-align: center;
+}
+@mixin circle{
+	width: 160px;
+	height: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $white;
+	border-radius: 50%;
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 10px;
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+		border: 1px solid $white;
+		border-radius: 50%;
+	}
+}
+@mixin number-text{
+	font-size: 24px;
+	font-family: $font-family-bold;
+	color: $white;
+}
+.numbers-item{
+	@media(max-width: $screen-sm - $screen-diff){
+		margin-bottom: 15px;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+	.numbers{
+		.elementor-widget-container{
+			@include circle;
+			margin: auto;
+			.elementor-heading-title{
+				@include number-text;
+			}
+		}
+	}
+	.heading{
+		.elementor-heading-title{
+			@include header-text;
+		}
+	}
+	.jet-carousel{
+		.slick-slide{
+			outline: none;
+			padding: 0;
+			.jet-carousel__item-title{
+				@include circle;
+				margin: 0 auto 20px;
+				@include number-text;
+			}
+			.jet-carousel__item-text{
+				@include header-text;
+			}
+		}
+	}
+}

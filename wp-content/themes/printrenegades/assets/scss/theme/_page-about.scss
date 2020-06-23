@@ -1,0 +1,42 @@
+.page__about{
+
+	.sidebar{
+		padding-top: 120px;
+
+		@media(max-width: $screen-md - $screen-diff){
+			padding-top: 18px;
+		}
+
+		&:before{
+			right: 15px;
+		}
+
+		.sidebar-list{
+
+			li{
+
+				a{
+					font-family: $font-family-medium;
+				}
+
+			}
+		}
+		
+	}
+
+	.list_of_posts{
+		padding-top: 60px;
+		padding-bottom: 40px;
+		
+		h3{
+			margin: 0 0 8px;
+			font-family: $font-family-bold;
+			font-size: 1.9375rem;
+			line-height: 27px;
+			@media(max-width: $screen-md - $screen-diff){
+				font-size: 20px;
+			}
+		}
+
+	}
+}

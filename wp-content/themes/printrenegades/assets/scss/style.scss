@@ -1,0 +1,32 @@
+/*!
+	Theme Name: Printrenegades
+	Theme URI: 
+	Description:
+	Author: Fortuna It
+	Author URI: 
+	Version: 1.0.0
+	Tested up to: 5.4
+	License: GNU General Public License v3 or later.
+	License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Text Domain: printrenegades
+*/
+
+/* Style - include Theme style
+   ========================================================================== */
+// Root
+@import "reset/variables";
+
+@import "theme/fonts";
+@import "theme/typography";
+
+// Base CSS
+@import "reset/reset";
+
+// Forms/
+@import "reset/forms";
+
+// Table
+@import "reset/table";
+
+// List
+@import "reset/list";

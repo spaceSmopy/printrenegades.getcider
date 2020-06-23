@@ -1,0 +1,38 @@
+.workers-slider{
+	.jet-carousel{
+		.slick-slide{
+			outline: none;
+		}
+		.jet-carousel__item-title{
+			font-size: 16px;
+			font-family: $font-family-bold;
+			line-height: 27px;
+			color: $gray-dark;
+			text-align: center;
+			margin-top: 20px;
+		}
+		.jet-arrow{
+			width: 42px;
+			height: 80px;
+			transform: translateY(-50%);
+			background-size: cover;
+			background-position: center;
+			
+			@media(max-width: $tablet){
+				width: 28px;
+				height: 50px;
+			}
+
+			&:before{
+				display: none;
+			}
+
+			&.prev-arrow{
+				background-image: url(assets/images/jet-prev.png);
+			}
+			&.next-arrow{
+				background-image: url(assets/images/jet-next.png);
+			}
+		}
+	}
+}

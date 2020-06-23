@@ -1,0 +1,258 @@
+/*
+DO NOT CHANGE THIS FILE
+to override any of the settings in this section, add your styling code in the custom directory.
+ */
+
+/* General - https://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+   
+   .alignright {
+   	float: right;
+   	margin-left: 1rem;
+   }
+
+   .alignleft {
+   	float: left;
+   	margin-right: 1rem;
+   }
+
+   .aligncenter {
+   	clear: both;
+   	display: block;
+   	margin-left: auto;
+   	margin-right: auto;
+   }
+
+   .pagination {
+   	margin: 20px auto;
+   }
+
+   .sticky {
+   	position: relative;
+   	display: block;
+   }
+
+   .bypostauthor {
+   	font-size: inherit;
+   }
+
+   .gallery-caption {
+   	display: block;
+   	font-size: $sm-font-size;
+   	line-height: $line-height-base;
+   	margin: 0;
+   	padding: $xs-padding;
+   }
+
+   .wp-caption {
+   	margin-bottom: 1.25rem;
+   	max-width: 100%;
+
+   	&.alignleft {
+   		margin: 5px 20px 20px 0;
+   	}
+
+   	&.alignright {
+   		margin: 5px 0 20px 20px;
+   	}
+
+   	img {
+   		display: block;
+   		margin-left: auto;
+   		margin-right: auto;
+   	}
+   }
+
+   .wp-caption-text {
+   	margin: 0;
+   }
+
+//Text meant only for screen readers:
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+	&:focus {
+		background-color: $gray-lighter;
+		clip: auto !important;
+		clip-path: none;
+		color: $gray-dark;
+		display: block;
+		font-size: $font-size-base;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+.section-title .elementor-heading-title{
+	font-family: $font-family-medium;
+	letter-spacing: 4px;
+	font-size: 40px;
+	text-transform: uppercase;
+	@media(max-width: $screen-sm - $screen-diff){
+		font-size: 30px;
+	}
+}
+
+.pum-trigger{
+	display: block;
+	margin: auto;
+	padding: 10px 20px;
+	color: $white;
+	background: $cs-green;
+	border: 0;
+	border-radius: 0;
+	&:hover{
+		background: $cs-green-md;
+	}
+}
+
+.transparent-button{
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	transition: all 0.3s ease-in-out;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.contacttable{
+	width: 100%;
+	background: transparent!important;
+	border: none!important;
+}
+
+.contacttable tr{
+	border:none!important;
+	padding:5px!important;
+	background: transparent!important;
+}
+
+.contacttable td{
+	padding:0!important;
+}
+
+.contact_button {
+	padding: 20px 35px;
+	margin-right:1px;
+	margin-left:1px;
+	text-decoration: none;
+	color: $white;
+	background: $cs-green;
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: .9rem;
+	line-height: 1;
+
+	&:hover {
+		background-color: $cs-green-md;
+		color: $white;
+	}
+}
+
+.mfp-bg {
+	background: none;
+}
+
+.mfp-content {
+	background-color: rgba(51, 51, 51, 0.6);
+	border-style: none;
+	border-color: rgb(0, 0, 0);
+	border-width: 1px;
+	border-radius: 25px;
+	box-shadow: rgba(2, 2, 2, 0.23) 5px 5px 10px 0px;
+	max-width: 767px;
+	margin: 0 auto;
+	padding: 40px;
+
+	.elementor-contact-form-7.jet-elements {
+		label {
+			width: 100%;
+		}
+
+		input[type='text'], input[type='email'], [type='text'], [type='number'], [type='date'], [type='tel'], select, textarea, textarea:focus{
+			margin-bottom: 20px!important;
+			background: #F0F0F0 !important;
+			color: #6B6464 !important;
+			font-size: 18px;
+			font-family:$font-family-medium;
+			border:none;
+			border-radius:10px;
+			width: 100%;
+			margin-bottom: 0 !important;
+		}
+
+		textarea {
+			height: 150px;
+		}
+
+		input[type='submit']{
+			float:right;
+			border-radius:10px;
+			color:#fff!important;
+			font-size: 22px;
+			font-family:$font-family-medium;
+			background: $cs-green;
+
+			&:hover {
+				background: $cs-green-md;
+			}
+		}
+
+		input::placeholder{
+			color:#fff;
+		}
+
+		::-webkit-input-placeholder {
+			color: #fff;
+		}
+		::-moz-placeholder {
+			color: #fff;
+		}
+		:-ms-input-placeholder {
+			color: #fff;
+		}
+		:-moz-placeholder {
+			color: #fff;
+		}
+	}
+}
+
+.mfp-close {
+	top: -80px !important;
+	right: -30px !important;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+
+	&:hover {
+		background: transparent !important;
+	}
+}
+
+
+
+

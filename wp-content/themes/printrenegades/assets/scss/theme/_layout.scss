@@ -1,0 +1,10 @@
+/* Basic responsive layout
+   ========================================================================== */
+
+$containers: '.site-header, body:not([class*="elementor-page-"]) .site-main, .container';
+
+#{$containers} {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+}

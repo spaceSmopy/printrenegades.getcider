@@ -1,0 +1,35 @@
+.instagram{
+	padding: 0 40px;
+
+	.iscwp-gallery-slider{
+		.slick-arrow{
+			width: 26px;
+			height: 50px;
+			&.slick-prev{
+				background: transparent url(assets/images/jet-prev.png) center !important;
+				background-size: cover !important;
+				left: -35px;
+			}
+			&.slick-next{
+				background: transparent url(assets/images/jet-next.png) center !important;
+				background-size: cover !important;
+				right: -35px;
+			}
+		}
+	}
+
+}
+
+.insta-btn{
+	a{
+		.elementor-button-content-wrapper{
+			align-items: center;
+
+			.elementor-button-icon{
+				i{
+					font-size: 25px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1501 @@
+<div class="quote-cont" id="quotePopup" style="z-index: 999999; display: none">
+    <div class="quote">
+
+        <a href="#" class="quote-close-btn">&times;</a>
+
+        <h2 class="quote-header">Quick Quote Tool</h2>
+
+        <!-- begin slide one -->
+        <div class="product-list">
+            <a href="#product-item-1" class="product-list__item">
+                <img src="assets/images/apparel-printing.png" alt="Apparel Printing">
+                <h3 class="product-item__header">Apparel Printing</h3>
+            </a>
+            <a href="#product-item-2" class="product-list__item">
+                <img src="assets/images/tote-bags.png" alt="Tote Bags">
+                <h3 class="product-item__header">Tote Bags</h3>
+            </a>
+            <a href="#product-item-3" class="product-list__item">
+                <img src="assets/images/poster-prints.png" alt="Posters / Flatstock">
+                <h3 class="product-item__header">Posters / Flatstock</h3>
+            </a>
+            <a href="#product-item-4" class="product-list__item">
+                <img src="assets/images/vinyl-cutting.png" alt="Stencil / Vinyl Cutting">
+                <h3 class="product-item__header">Stencil / Vinyl Cutting</h3>
+            </a>
+            <a href="#product-item-5" class="product-list__item">
+                <img src="assets/images/buttons.png" alt="Buttons">
+                <h3 class="product-item__header">Buttons</h3>
+            </a>
+            <a href="#product-item-6" class="product-list__item">
+                <img src="assets/images/embroidery.png" alt="Embroidery">
+                <h3 class="product-item__header">Embroidery</h3>
+            </a>
+        </div>
+        <!-- end slide one -->
+
+        <!-- begin slide two -->
+        <div class="product-checked">
+            <div class="product-item" id="product-item-1" data-section="apparel_printing">
+                <div class="product-item__header">
+                    <img src="assets/images/apparel-printing.png" alt="Apparel Printing">
+                    <h3 class="product-item__name">Apparel Printing</h3>
+                    <p class="product-item__text">Select Option(s) Below to Enter Information</p>
+                </div>
+                <form class="product-item-form">
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/garment-type.png" alt="Garment Type" class="form-item__img">
+                            <h4 class="form-item__name">Garment Type</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Style</span>
+                                <div class="select-cont error">
+                                    <select name="garment_type" class="select" required>
+                                        <option value="">Select Option</option>
+                                        <option value="short_sleeve_tee">Short Sleeve Tee</option>
+                                        <option value="long_sleeve_tee">Long Sleeve Tee</option>
+                                        <option value="pullover_hood">Pullover Hood</option>
+                                        <option value="zip_up_hood">Zip-up Hood</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="own-garments" class="label checkbox">Do you have your own garments?</label>
+                                <input name="garment_type" value="do_you_have_own_garment" type="checkbox"
+                                       id="own-garments">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/quantity.png" alt="Total Quantity" class="form-item__img">
+                            <h4 class="form-item__name">Total Quantity</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Qty</span>
+                                <div class="select-cont">
+                                    <select name="total_quantity" class="select" required>
+                                        <option value="">Select Quantity</option>
+                                        <option value="10_24">10-24</option>
+                                        <option value="25_49">25-49</option>
+                                        <option value="50_99">50-99</option>
+                                        <option value="100_249">100-249</option>
+                                        <option value="250_plus">250+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/locations.png" alt="Total Print Locations" class="form-item__img">
+                            <h4 class="form-item__name">Total Print Locations</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Print<br>Locations</span>
+                                <div class="select-cont">
+                                    <select name="total_print_locations" class="select" required>
+                                        <option value="">Please Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/colors.png" alt="Number of Ink Colors" class="form-item__img">
+                            <h4 class="form-item__name">Number of Ink Colors</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Color(s)</span>
+                                <div class="select-cont">
+                                    <select name="number_of_ink_colors" class="select" required>
+                                        <option value="">Select Number of Colors</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="full_color_dtg">Full Color (DTG)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span class="label">Color(s)</span>
+                                <div class="select-cont">
+                                    <select name="number_of_ink_colors" class="select" required>
+                                        <option value="">Select Number of Colors</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="full_color_dtg">Full Color (DTG)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#" class="btn previous-btn">Previous</a>
+                        <button class="btn quote-btn">Get Quote</button>
+                    </nav>
+                </form>
+            </div>
+            <div class="product-item" id="product-item-2" data-section="tote_bags">
+                <div class="product-item__header">
+                    <img src="assets/images/tote-bags.png" alt="Tote Bags">
+                    <h3 class="product-item__name">Tote Bags</h3>
+                    <p class="product-item__text">Select Option(s) Below to Enter Information</p>
+                </div>
+                <form class="product-item-form">
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/weight.png" alt="Weight" class="form-item__img">
+                            <h4 class="form-item__name">Weight</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Weight</span>
+                                <div class="select-cont">
+                                    <select name="weight" class="select" required>
+                                        <option value="">Select Size</option>
+                                        <option value="6oz">6oz</option>
+                                        <option value="12oz">12oz</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/quantitytotes.png" alt="Total Quantity" class="form-item__img">
+                            <h4 class="form-item__name">Total Quantity</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Qty</span>
+                                <div class="select-cont">
+                                    <select name="total_quantity" class="select" required>
+                                        <option value="">Select Quantity</option>
+                                        <option value="10_24">10-24</option>
+                                        <option value="25_49">25-49</option>
+                                        <option value="50_99">50-99</option>
+                                        <option value="100_249">100-249</option>
+                                        <option value="250_plus">250+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/locationstotes.png" alt="Total Print Locations"
+                                 class="form-item__img">
+                            <h4 class="form-item__name">Total Print Locations</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Print<br>Locations</span>
+                                <div class="select-cont">
+                                    <select name="total_print_locations" class="select" required>
+                                        <option value="">Please Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/colors.png" alt="Number of Ink Colors" class="form-item__img">
+                            <h4 class="form-item__name">Number of Ink Colors</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Color(s)</span>
+                                <div class="select-cont">
+                                    <select name="number_of_ink_colors" class="select" required>
+                                        <option value="">Select Number of Colors</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="full_color_dtg">Full Color (DTG)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#" class="btn previous-btn">Previous</a>
+                        <button class="btn quote-btn">Get Quote</button>
+                    </nav>
+                </form>
+            </div>
+            <div class="product-item" id="product-item-3" data-section="posters_flatstock">
+                <div class="product-item__header">
+                    <img src="assets/images/poster-prints.png" alt="Posters / Flatstock">
+                    <h3 class="product-item__name">Posters / Flatstock</h3>
+                    <p class="product-item__text">Select Option(s) Below to Enter Information</p>
+                </div>
+                <form class="product-item-form">
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/sizeposters.png" alt="Paper Size" class="form-item__img">
+                            <h4 class="form-item__name">Paper Size</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Style</span>
+                                <div class="select-cont">
+                                    <select name="paper_size" class="select" required>
+                                        <option value="">Select Paper Size</option>
+                                        <option value="85x11">8.5x11</option>
+                                        <option value="9x24">9x24</option>
+                                        <option value="11x17">11 x 17</option>
+                                        <option value="12x12">12 x 12</option>
+                                        <option value="12x18">12 x 18</option>
+                                        <option value="12x24">12 x 24</option>
+                                        <option value="18x24">18 x 24</option>
+                                        <option value="24x24">24 x 24</option>
+                                        <option value="24x36">24 x 36</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/quantityposters.png" alt="Total Quantity" class="form-item__img">
+                            <h4 class="form-item__name">Total Quantity</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Qty</span>
+                                <div class="select-cont">
+                                    <select name="total_quantity" class="select" required>
+                                        <option value="">Select Quantity</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="150">150</option>
+                                        <option value="200">200</option>
+                                        <option value="300">300</option>
+                                        <option value="500">500</option>
+                                        <option value="1000">1000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/colors.png" alt="Number of Ink Colors" class="form-item__img">
+                            <h4 class="form-item__name">Number of Ink Colors</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Color(s)</span>
+                                <div class="select-cont">
+                                    <select name="number_of_inc" class="select" required>
+                                        <option value="">Select Number of Colors</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#" class="btn previous-btn">Previous</a>
+                        <button class="btn quote-btn">Get Quote</button>
+                    </nav>
+                </form>
+            </div>
+            <div class="product-item" id="product-item-4" data-section="stencil_vinyl_cutting">
+                <div class="product-item__header">
+                    <img src="assets/images/vinyl-cutting.png" alt="Stencil / Vinyl Cutting">
+                    <h3 class="product-item__name">Stencil / Vinyl Cutting</h3>
+                    <p class="product-item__text red">Unfortunately, we do not offer multi-color stencils or vinyl
+                        cutting services.</p>
+                </div>
+                <form class="product-item-form">
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/stencil-material.png" alt="Material" class="form-item__img">
+                            <h4 class="form-item__name">Material</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Material</span>
+                                <div class="select-cont">
+                                    <select name="material" class="select" id="svc" required>
+                                        <option value="">Select Option</option>
+                                        <option value="cardboard_stencil_cutting">Cardboard Stencil Cutting</option>
+                                        <option value="vinyl_cutting">Vinyl Cutting</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item" id="svc-size" style="display: none;">
+                        <section class="form-item__header">
+                            <img src="assets/images/stencil-size.png" alt="Size" class="form-item__img">
+                            <h4 class="form-item__name">Size</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Size</span>
+                                <div class="select-cont">
+                                    <select name="size" class="select" required>
+                                        <option value="">Select Size</option>
+                                        <option value="85x11">8.5 x 11</option>
+                                        <option value="17x22">17 x 22</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item" id="svc-qty" style="display: none;">
+                        <section class="form-item__header">
+                            <img src="assets/images/stencil-qty.png" alt="Qty" class="form-item__img">
+                            <h4 class="form-item__name">Quantity</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Qty</span>
+                                <div class="select-cont">
+                                    <select name="quantity" class="select" required>
+                                        <option value="">Select Quantity</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item" id="svc-cutting" style="display: none;">
+                        <section class="form-item__header">
+                            <img src="assets/images/stencil-cutting.png" alt="Cutting" class="form-item__img">
+                            <h4 class="form-item__name">Cutting</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Cutting</span>
+                                <div class="select-cont">
+                                    <select name="cutting" class="select" required>
+                                        <option value="">Select Option</option>
+                                        <option value="cutting_only">Cutting Only</option>
+                                        <option value="cutting_wedding_transfering">Cutting, Wedding, Transferring
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item" id="svc-length" style="display: none;">
+                        <section class="form-item__header">
+                            <img src="assets/images/stencil-length.png" alt="Length" class="form-item__img">
+                            <h4 class="form-item__name">Length</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Length</span>
+                                <div class="select-cont">
+                                    <select name="length" class="select" required>
+                                        <option value="">Select Length</option>
+                                        <option value="22x12">22' x 12'</option>
+                                        <option value="22x24">22' x 24'</option>
+                                        <option value="22x60">22' x 60'</option>
+                                        <option value="22x120">22' x 120'</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#" class="btn previous-btn">Previous</a>
+                        <button class="btn quote-btn">Get Quote</button>
+                    </nav>
+                </form>
+            </div>
+            <div class="product-item" id="product-item-5" data-section="buttons">
+                <div class="product-item__header">
+                    <img src="assets/images/buttons.png" alt="Buttons">
+                    <h3 class="product-item__name">Buttons</h3>
+                    <p class="product-item__text">Select Option(s) Below to Enter Information</p>
+                </div>
+                <form class="product-item-form">
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/Button-Size.png" alt="Size" class="form-item__img">
+                            <h4 class="form-item__name">Size</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Size</span>
+                                <div class="select-cont">
+                                    <select name="size" class="select" required>
+                                        <option value="">Select Size</option>
+                                        <option value="1">1'</option>
+                                        <option value="1_25">1.25'</option>
+                                        <option value="2_25">2.25'</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/Button-Qty.png" alt="Total Quantity" class="form-item__img">
+                            <h4 class="form-item__name">Total Quantity</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Qty</span>
+                                <!--<div class="input-cont">
+                                    <input name="total_quantity" type="number" placeholder="Enter Quantity (Minimum 50)" min="50">
+                                </div>-->
+                                <div class="select-cont">
+                                    <select name="total_quantity" class="select" required>
+                                        <option value="">Select Size</option>
+                                        <option value="10_24">10-24</option>
+                                        <option value="25_49">25-49</option>
+                                        <option value="50_99">50-99</option>
+                                        <option value="100_249">100-249</option>
+                                        <option value="250_plus">250+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#" class="btn previous-btn">Previous</a>
+                        <button class="btn quote-btn">Get Quote</button>
+                    </nav>
+                </form>
+            </div>
+            <div class="product-item" id="product-item-6" data-section="embroidery">
+                <div class="product-item__header">
+                    <img src="assets/images/embroidery.png" alt="Embroidery">
+                    <h3 class="product-item__name">Embroidery</h3>
+                    <p class="product-item__text">Select Option(s) on Left-Hand Side to Enter Information</p>
+                    <p class="product-item__text red">The quoted price EXCLUDES the cost of the garment and pricing may
+                        be subject to change depending on the complexity and size of the artwork.</p>
+                </div>
+                <form class="product-item-form">
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/embroidery-location.png" alt="Placement" class="form-item__img">
+                            <h4 class="form-item__name">Placement</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Placement</span>
+                                <div class="select-cont">
+                                    <select name="placement" class="select" required>
+                                        <option value="">Select Option</option>
+                                        <option value="pocket_breast">Pocket / Breast</option>
+                                        <option value="sleeve">Sleeve</option>
+                                        <option value="unstructured_cap">Unstructured Cap</option>
+                                        <option value="structured_cap">Structured Cap</option>
+                                        <option value="full_size">Full Size</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <section class="form-item__header">
+                            <img src="assets/images/embroidery-qty.png" alt="Total Quantity" class="form-item__img">
+                            <h4 class="form-item__name">Total Quantity</h4>
+                        </section>
+                        <div class="form-item__input">
+                            <div class="row">
+                                <span class="label">Qty</span>
+                                <div class="select-cont">
+                                    <select name="total_quantity" class="select" required>
+                                        <option value="">Select Quantity</option>
+                                        <option value="10_24">10-24</option>
+                                        <option value="25_49">24-49</option>
+                                        <option value="50_99">50-99</option>
+                                        <option value="100_249">100-249</option>
+                                        <option value="250_plus">250+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#" class="btn previous-btn">Previous</a>
+                        <button class="btn quote-btn">Get Quote</button>
+                    </nav>
+                </form>
+            </div>
+        </div>
+        <!-- end slide two -->
+
+        <!-- begin slide tree -->
+        <div class="result-slide" style="display:none;">
+            <div class="pum-content popmake-content">
+
+                <div class="gf_browser_chrome gform_wrapper quickQuote_wrapper" id="gform_wrapper_5" style="">
+                    <form method="post" enctype="multipart/form-data" target="gform_ajax_frame_5" id="gform_5"
+                          class="quickQuote" action="/">
+                        <div id="gform_page_5_3" class="gform_page">
+                            <div class="gform_page_fields">
+                                <ul id="gform_fields_5_3"
+                                    class="gform_fields left_label form_sublabel_below description_below">
+                                    <li class=" gfield gf_readonly field_sublabel_below field_description_below hidden_label gfield_visibility_visible padding-right_none">
+                                        <h2 class="apparel-title sectionTitle align_center">
+                                            Apparel Printing</h2>
+
+                                    </li>
+                                    <li id="field_5_123"
+                                        class="gfield gf_readonly field_sublabel_below field_description_below hidden_label gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_123">Quote</label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_123"
+                                                                                                   id="input_5_123"
+                                                                                                   type="text"
+                                                                                                   value="456$"
+                                                                                                   class="large fadeIn orderSumInput"
+                                                                                                   tabindex="69"
+                                                                                                   aria-invalid="false"
+                                                                                                   readonly="readonly"><span></span>
+                                        </div>
+                                    </li>
+                                    <li id="field_5_82"
+                                        class="gfield field_sublabel_below field_description_below hidden_label gfield_visibility_visible">
+                                        <label class="gfield_label">Rush Order</label>
+                                        <div class="ginput_container ginput_container_checkbox">
+                                            <ul class="gfield_checkbox" id="input_5_82">
+                                                <li class="gchoice_5_82_1">
+                                                    <input name="input_82.1" type="checkbox" value="Yes"
+                                                           id="choice_5_82_1" tabindex="70">
+                                                    <label for="choice_5_82_1" id="label_5_82_1">Rush Order?</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gform_page_footer">
+                                <input type="button" id="gform_previous_button_5_33"
+                                       class="gform_previous_button button go_back_to_product_checked"
+                                       value="Edit Order" tabindex="71">
+                                <input type="button" id="gform_next_button_5_33"
+                                       class="gform_next_button button goToContactDataSlide"
+                                       value="Submit Order" tabindex="72">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end slide tree -->
+
+        <!-- begin slide four -->
+        <div class="contact-data" style="display: none">
+            <div class="pum-content popmake-content">
+
+                <div class="gf_browser_chrome gform_wrapper quickQuote_wrapper" id="gform_wrapper_5" style="">
+                    <form method="post" enctype="multipart/form-data" target="gform_ajax_frame_5" id="gform_5"
+                          class="quickQuote" action="/">
+                        <div class="gform_body">
+                            <div id="gform_page_5_4" class="gform_page">
+                                <div class="gform_page_fields">
+                                    <ul id="gform_fields_5_4"
+                                        class="gform_fields left_label form_sublabel_below description_below">
+                                        <li id="field_5_65"
+                                            class="sectionTitleWrapper gfield gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <h2 class="apparel-title sectionTitle">Apparel Printing</h2></li>
+                                        <li id="field_5_24"
+                                            class="gfield gsection field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <h2 class="gsection_title">Let's Get Your Details</h2></li>
+                                        <li id="field_5_25"
+                                            class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <label class="gfield_label" for="input_5_25">Email<span
+                                                    class="gfield_required">*</span></label>
+                                            <div class="ginput_container ginput_container_email">
+                                                <input name="input_25" id="input_5_25" type="text" value=""
+                                                       class="large contact_data_email" tabindex="73"
+                                                       aria-required="true"
+                                                       aria-invalid="false">
+                                            </div>
+                                        </li>
+                                        <li id="field_5_26"
+                                            class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <label class="gfield_label" for="input_5_26">Company<span
+                                                    class="gfield_required">*</span></label>
+                                            <div class="ginput_container ginput_container_text"><input name="input_26"
+                                                                                                       id="input_5_26"
+                                                                                                       type="text"
+                                                                                                       value=""
+                                                                                                       class="large contact_data_company"
+                                                                                                       tabindex="74"
+                                                                                                       aria-required="true"
+                                                                                                       aria-invalid="false">
+                                            </div>
+                                        </li>
+                                        <li id="field_5_27"
+                                            class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <label class="gfield_label" for="input_5_27">Name<span
+                                                    class="gfield_required">*</span></label>
+                                            <div class="ginput_container ginput_container_text"><input name="input_27"
+                                                                                                       id="input_5_27"
+                                                                                                       type="text"
+                                                                                                       value=""
+                                                                                                       class="large contact_data_name"
+                                                                                                       tabindex="75"
+                                                                                                       aria-required="true"
+                                                                                                       aria-invalid="false">
+                                            </div>
+                                        </li>
+                                        <li id="field_5_28"
+                                            class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <label class="gfield_label" for="input_5_28">Phone<span
+                                                    class="gfield_required">*</span></label>
+                                            <div class="ginput_container ginput_container_phone"><input name="input_28"
+                                                                                                        id="input_5_28"
+                                                                                                        type="text"
+                                                                                                        value=""
+                                                                                                        class="large contact_data_phone"
+                                                                                                        tabindex="76"
+                                                                                                        aria-required="true"
+                                                                                                        aria-invalid="false">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gform_page_footer">
+                                    <input type="button" id="gform_previous_button_5_11"
+                                           class="gform_previous_button button goToConfirmationPage" value="Previous"
+                                           tabindex="77">
+                                    <input type="button" id="gform_next_button_5_11"
+                                           class="gform_next_button button finallySubmitOrder"
+                                           value="Next" tabindex="78">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end slide four -->
+
+
+        <!-- begin slide five -->
+
+        <div class="tell_more-slide" style="display:none;">
+            <div class="pum-content popmake-content">
+
+                <div class="gf_browser_chrome gform_wrapper quickQuote_wrapper" id="gform_wrapper_5" style="">
+                    <form method="post" enctype="multipart/form-data" target="gform_ajax_frame_5" id="gform_5"
+                          class="quickQuote" action="/">
+                        <div id="gform_page_5_5" class="gform_page">
+                            <div class="gform_page_fields">
+                                <ul id="gform_fields_5_5"
+                                    class="gform_fields left_label form_sublabel_below description_below">
+                                    <li id="field_5_66"
+                                        class="gfield gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <h2 class="apparel-title sectionTitle">Apparel Printing</h2>
+                                    </li>
+
+                                    <li id="field_5_18"
+                                        class="gfield gsection field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <h2 class="gsection_title">Tell Us More About Your Project</h2>
+                                    </li>
+                                    <li data-section="apparel_printing" id="field_5_102"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label">Print Locations<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_checkbox">
+                                            <ul class="gfield_checkbox" id="input_5_102">
+                                                <li class="gchoice_5_102_1">
+                                                    <input name="input_102.1" type="checkbox" value="Center Chest"
+                                                           id="choice_5_102_1" tabindex="79">
+                                                    <label for="choice_5_102_1" id="label_5_102_1">Center Chest</label>
+                                                </li>
+                                                <li class="gchoice_5_102_2">
+                                                    <input name="input_102.2" type="checkbox" value="Left Breast"
+                                                           id="choice_5_102_2" tabindex="80">
+                                                    <label for="choice_5_102_2" id="label_5_102_2">Left Breast</label>
+                                                </li>
+                                                <li class="gchoice_5_102_3">
+                                                    <input name="input_102.3" type="checkbox" value="Center Back"
+                                                           id="choice_5_102_3" tabindex="81">
+                                                    <label for="choice_5_102_3" id="label_5_102_3">Center Back</label>
+                                                </li>
+                                                <li class="gchoice_5_102_4">
+                                                    <input name="input_102.4" type="checkbox" value="Yoke / High Back"
+                                                           id="choice_5_102_4" tabindex="82">
+                                                    <label for="choice_5_102_4" id="label_5_102_4">Yoke / High
+                                                        Back</label>
+                                                </li>
+                                                <li class="gchoice_5_102_5">
+                                                    <input name="input_102.5" type="checkbox" value="Sleeves"
+                                                           id="choice_5_102_5" tabindex="83">
+                                                    <label for="choice_5_102_5" id="label_5_102_5">Sleeves</label>
+                                                </li>
+                                                <li class="gchoice_5_102_6">
+                                                    <input name="input_102.6" type="checkbox" value="Other"
+                                                           id="choice_5_102_6" tabindex="84">
+                                                    <label for="choice_5_102_6" id="label_5_102_6">Other</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li data-section="embroidery" id="field_5_153"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Graphic Size<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_153_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_153_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_153_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Height</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_153_cell1"
+                                                        data-label="Width">
+                                                        <input aria-label="Width" type="text" name="input_153[]"
+                                                               value="" tabindex="85">
+                                                    </td>
+                                                    <td class="gfield_list_cell gfield_list_153_cell2"
+                                                        data-label="Height">
+                                                        <input aria-label="Height" type="text" name="input_153[]"
+                                                               value="" tabindex="86">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_153">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="embroidery" id="field_5_154"
+                                        class="gfield quote_data_field field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_154">How Many Colors of Thread Are
+                                            Needed?</label>
+                                        <div class="ginput_container ginput_container_number">
+                                            <input name="input_154" id="input_5_154" type="text" value="" class="large"
+                                                   tabindex="87" aria-invalid="false">
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" data-show-if="center chest" id="field_5_110"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">
+                                            Print Dimensions (Center Chest)<span class="gfield_required">*</span>
+                                        </label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_110_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_110_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_110_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Height</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_110_cell1"
+                                                        data-label="Width"><input aria-label="Width" type="text"
+                                                                                  name="input_110[]" value=""
+                                                                                  tabindex="88"></td>
+                                                    <td class="gfield_list_cell gfield_list_110_cell2"
+                                                        data-label="Height"><input aria-label="Height" type="text"
+                                                                                   name="input_110[]" value=""
+                                                                                   tabindex="89"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_110">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" data-show-if="left breast" id="field_5_111"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Print Dimensions (Left
+                                            Breast)<span class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_111_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_111_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_111_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Height</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_111_cell1"
+                                                        data-label="Width"><input aria-label="Width" type="text"
+                                                                                  name="input_111[]" value=""
+                                                                                  tabindex="90"></td>
+                                                    <td class="gfield_list_cell gfield_list_111_cell2"
+                                                        data-label="Height"><input aria-label="Height" type="text"
+                                                                                   name="input_111[]" value=""
+                                                                                   tabindex="91"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_111">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" data-show-if="center back" id="field_5_113"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Print Dimensions (Center
+                                            Back)<span class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_113_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_113_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_113_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Height</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_113_cell1"
+                                                        data-label="Width"><input aria-label="Width" type="text"
+                                                                                  name="input_113[]" value=""
+                                                                                  tabindex="92"></td>
+                                                    <td class="gfield_list_cell gfield_list_113_cell2"
+                                                        data-label="Height"><input aria-label="Height" type="text"
+                                                                                   name="input_113[]" value=""
+                                                                                   tabindex="93"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_113">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" data-show-if="yoke / high back" id="field_5_112"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Print Dimensions (Yoke /
+                                            High Back)<span class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_112_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_112_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_112_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Height</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_112_cell1"
+                                                        data-label="Width"><input aria-label="Width" type="text"
+                                                                                  name="input_112[]" value=""
+                                                                                  tabindex="94"></td>
+                                                    <td class="gfield_list_cell gfield_list_112_cell2"
+                                                        data-label="Height"><input aria-label="Height" type="text"
+                                                                                   name="input_112[]" value=""
+                                                                                   tabindex="95"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_112">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" data-show-if="sleeves" id="field_5_114"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Print Dimensions
+                                            (Sleeves )<span class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_114_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_114_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_114_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Width</th>
+                                                    <th scope="col">Height</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_114_cell1"
+                                                        data-label="Width"><input aria-label="Width" type="text"
+                                                                                  name="input_114[]" value=""
+                                                                                  tabindex="96"></td>
+                                                    <td class="gfield_list_cell gfield_list_114_cell2"
+                                                        data-label="Height"><input aria-label="Height" type="text"
+                                                                                   name="input_114[]" value=""
+                                                                                   tabindex="97"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_114">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" data-show-if="other" id="field_5_115"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Print Dimensions (Other)<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_115_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_115_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_115_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">W</th>
+                                                    <th scope="col">H</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_115_cell1" data-label="W">
+                                                        <input aria-label="W" type="text" name="input_115[]" value=""
+                                                               tabindex="98"></td>
+                                                    <td class="gfield_list_cell gfield_list_115_cell2" data-label="H">
+                                                        <input aria-label="H" type="text" name="input_115[]" value=""
+                                                               tabindex="99"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_115">Enter Values Above
+                                            in Inches
+                                        </div>
+                                    </li>
+                                    <li data-section="posters_flatstock" id="field_5_121"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_121">Requested Paper Color<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_121"
+                                                                                                   id="input_5_121"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="100"
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                    <li data-section="posters_flatstock" id="field_5_120"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Artwork Size<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_120_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_120_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_120_col_3" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">W</th>
+                                                    <th scope="col">H</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_120_cell1" data-label="W">
+                                                        <input aria-label="W" type="text" name="input_120[]" value=""
+                                                               tabindex="101"></td>
+                                                    <td class="gfield_list_cell gfield_list_120_cell2" data-label="H">
+                                                        <input aria-label="H" type="text" name="input_120[]" value=""
+                                                               tabindex="102"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_120">we require a 1"
+                                            margin on all sides
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags,buttons" id="field_5_103"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label">Ink Type<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_radio">
+                                            <ul class="gfield_radio" id="input_5_103">
+                                                <li class="gchoice_5_103_0"><input name="input_103" type="radio"
+                                                                                   value="Plastisol" id="choice_5_103_0"
+                                                                                   tabindex="103"><label
+                                                        for="choice_5_103_0" id="label_5_103_0">Plastisol</label></li>
+                                                <li class="gchoice_5_103_1"><input name="input_103" type="radio"
+                                                                                   value="Waterbased"
+                                                                                   id="choice_5_103_1"
+                                                                                   tabindex="104"><label
+                                                        for="choice_5_103_1" id="label_5_103_1">Waterbased</label></li>
+                                                <li class="gchoice_5_103_2"><input name="input_103" type="radio"
+                                                                                   value="DTG" id="choice_5_103_2"
+                                                                                   tabindex="105"><label
+                                                        for="choice_5_103_2" id="label_5_103_2">DTG</label></li>
+                                                <li class="gchoice_5_103_3"><input name="input_103" type="radio"
+                                                                                   value="Specialty" id="choice_5_103_3"
+                                                                                   tabindex="106"><label
+                                                        for="choice_5_103_3" id="label_5_103_3">Specialty</label></li>
+                                                <li class="gchoice_5_103_4"><input name="input_103" type="radio"
+                                                                                   value="I Don't Know"
+                                                                                   id="choice_5_103_4"
+                                                                                   tabindex="107"><label
+                                                        for="choice_5_103_4" id="label_5_103_4">I Don't Know</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li data-section="posters_flatstock" id="field_5_122"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label">Do you require the posters to be cut to "full bleed"
+                                            (artwork to the edge of the paper)<span
+                                                    class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_radio">
+                                            <ul class="gfield_radio" id="input_5_122">
+                                                <li class="gchoice_5_122_0"><input name="input_122" type="radio"
+                                                                                   value="Yes" id="choice_5_122_0"
+                                                                                   tabindex="108"><label
+                                                        for="choice_5_122_0" id="label_5_122_0">Yes</label></li>
+                                                <li class="gchoice_5_122_1"><input name="input_122" type="radio"
+                                                                                   value="No" id="choice_5_122_1"
+                                                                                   tabindex="109"><label
+                                                        for="choice_5_122_1" id="label_5_122_1">No</label></li>
+                                            </ul>
+                                        </div>
+                                        <div class="gfield_description" id="gfield_description_5_122">*additional
+                                            cutting fees will be added
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing,embroidery" id="field_5_155"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_155">Garment Style and Color<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_155"
+                                                                                                   id="input_5_155"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="110"
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false">
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" id="field_5_174"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Garment Sizes<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_174_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_174_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_174_col_3" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_174_col_4" class="gfield_list_col_even">
+                                                    <col id="gfield_list_174_col_5" class="gfield_list_col_odd">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">XS</th>
+                                                    <th scope="col">S</th>
+                                                    <th scope="col">M</th>
+                                                    <th scope="col">L</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_174_cell1" data-label="XS">
+                                                        <input aria-label="XS" type="text" name="input_174[]" value=""
+                                                               tabindex="111"></td>
+                                                    <td class="gfield_list_cell gfield_list_174_cell2" data-label="S">
+                                                        <input aria-label="S" type="text" name="input_174[]" value=""
+                                                               tabindex="112"></td>
+                                                    <td class="gfield_list_cell gfield_list_174_cell3" data-label="M">
+                                                        <input aria-label="M" type="text" name="input_174[]" value=""
+                                                               tabindex="113"></td>
+                                                    <td class="gfield_list_cell gfield_list_174_cell4" data-label="L">
+                                                        <input aria-label="L" type="text" name="input_174[]" value=""
+                                                               tabindex="114"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing" id="field_5_175"
+                                        class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Garment Sizes<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_list ginput_list">
+                                            <table class="gfield_list gfield_list_container">
+                                                <colgroup>
+                                                    <col id="gfield_list_175_col_1" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_175_col_2" class="gfield_list_col_even">
+                                                    <col id="gfield_list_175_col_3" class="gfield_list_col_odd">
+                                                    <col id="gfield_list_175_col_4" class="gfield_list_col_even">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">XL</th>
+                                                    <th scope="col">2XL</th>
+                                                    <th scope="col">3XL</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="gfield_list_row_odd gfield_list_group">
+                                                    <td class="gfield_list_cell gfield_list_175_cell1" data-label="XL">
+                                                        <input aria-label="XL" type="text" name="input_175[]" value=""
+                                                               tabindex="115"></td>
+                                                    <td class="gfield_list_cell gfield_list_175_cell2" data-label="2XL">
+                                                        <input aria-label="2XL" type="text" name="input_175[]" value=""
+                                                               tabindex="116"></td>
+                                                    <td class="gfield_list_cell gfield_list_175_cell3" data-label="3XL">
+                                                        <input aria-label="3XL" type="text" name="input_175[]" value=""
+                                                               tabindex="117"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li data-section="tote_bags" id="field_5_157"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_157">Tote Size and Color<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_157"
+                                                                                                   id="input_5_157"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="118"
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags" id="field_5_156"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_156">Ink Color(s)<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_156"
+                                                                                                   id="input_5_156"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="119"
+                                                                                                   placeholder="Green, Blue, Red, etc."
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false">
+                                        </div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags" id="field_5_168"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_168">Ink Color(s) - Location 2<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_168"
+                                                                                                   id="input_5_168"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="120"
+                                                                                                   placeholder="Green, Blue, Red, etc."
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags" id="field_5_172"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_172">Ink Color(s) - Location 2<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_172"
+                                                                                                   id="input_5_172"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="121"
+                                                                                                   placeholder="Green, Blue, Red, etc."
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags" id="field_5_171"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_171">Ink Color(s) - Location 3<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_171"
+                                                                                                   id="input_5_171"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="122"
+                                                                                                   placeholder="Green, Blue, Red, etc."
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags" id="field_5_170"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_170">Ink Color(s) - Location 4<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_170"
+                                                                                                   id="input_5_170"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="123"
+                                                                                                   placeholder="Green, Blue, Red, etc."
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                    <li data-section="apparel_printing,tote_bags" id="field_5_169"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_169">Ink Color(s) - Location 5<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_text"><input name="input_169"
+                                                                                                   id="input_5_169"
+                                                                                                   type="text" value=""
+                                                                                                   class="large"
+                                                                                                   tabindex="124"
+                                                                                                   placeholder="Green, Blue, Red, etc."
+                                                                                                   aria-required="true"
+                                                                                                   aria-invalid="false"
+                                        ></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gform_page_footer">
+                                <input type="button" id="gform_previous_button_5_12"
+                                       class="gform_previous_button button goBackToContacts" value="Previous"
+                                       tabindex="125">
+                                <input type="button" id="gform_next_button_5_12"
+                                       class="gform_next_button button goToFinishSlide"
+                                       value="Next" tabindex="126">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end slide five -->
+
+
+        <!-- begin slide six -->
+        <div class="finished-slide" style="display:none;">
+            <div class="pum-content popmake-content">
+
+                <div class="gf_browser_chrome gform_wrapper quickQuote_wrapper" id="gform_wrapper_5" style="">
+                    <form method="post" enctype="multipart/form-data" target="gform_ajax_frame_5" id="gform_5"
+                          class="quickQuote" action="/">
+                        <div id="gform_page_5_6" class="gform_page">
+                            <div class="gform_page_fields">
+                                <ul id="gform_fields_5_6"
+                                    class="gform_fields left_label form_sublabel_below description_below">
+
+                                    <li id="field_5_67"
+                                        class="gfield gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <h2 class="apparel-title sectionTitle">Apparel Printing</h2>
+                                    </li>
+
+                                    <li id="field_5_13"
+                                        class="gfield gsection field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <h2 class="gsection_title">Almost Finished!</h2>
+                                    </li>
+                                    <li id="field_5_109"
+                                        class="gfield quote_data_field show_error_message gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label">Will You Require Your Order to be Shipped?<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_radio">
+                                            <ul class="gfield_radio" id="input_5_109">
+                                                <li class="gchoice_5_109_0"><input name="input_109" type="radio"
+                                                                                   value="Yes" id="choice_5_109_0"
+                                                                                   tabindex="127"><label
+                                                        for="choice_5_109_0" id="label_5_109_0">Yes</label></li>
+                                                <li class="gchoice_5_109_1"><input name="input_109" type="radio"
+                                                                                   value="No, I Will Pick Up"
+                                                                                   id="choice_5_109_1"
+                                                                                   tabindex="128"><label
+                                                        for="choice_5_109_1" id="label_5_109_1">No, I Will Pick
+                                                    Up</label></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="field_5_17" style="display: none"
+                                        class="isShippingField gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label gfield_label_before_complex">Shipping
+                                            Information<span class="gfield_required">*</span></label>
+                                        <div class="ginput_complex ginput_container has_street has_street2 has_city has_state has_zip has_country ginput_container_address"
+                                             id="input_5_17">
+                                            <span class="ginput_full address_line_1" id="input_5_17_1_container">
+                                                <input type="text" name="input_17.1" id="input_5_17_1" value=""
+                                                       tabindex="129" aria-required="true">
+                                                <label for="input_5_17_1" id="input_5_17_1_label">Street Address</label>
+                                            </span>
+                                            <span class="ginput_full address_line_2" id="input_5_17_2_container">
+                                                <input type="text" name="input_17.2" id="input_5_17_2" value=""
+                                                       tabindex="130">
+                                                <label for="input_5_17_2" id="input_5_17_2_label">Address Line 2</label>
+                                            </span>
+                                            <span class="ginput_left address_city" id="input_5_17_3_container">
+                                                <input type="text" name="input_17.3" id="input_5_17_3" value=""
+                                                       tabindex="131" aria-required="true">
+                                                <label for="input_5_17_3" id="input_5_17_3_label">City</label>
+                                            </span>
+                                            <span class="ginput_right address_state" id="input_5_17_4_container">
+                                                    <input type="text" name="input_17.4" id="input_5_17_4" value=""
+                                                           tabindex="133" aria-required="true">
+                                                    <label for="input_5_17_4" id="input_5_17_4_label">State / Province / Region</label>
+                                            </span>
+                                            <span class="ginput_left address_zip" id="input_5_17_5_container">
+                                                <input type="text" name="input_17.5" id="input_5_17_5" value=""
+                                                       tabindex="134" aria-required="true">
+                                                <label for="input_5_17_5"
+                                                       id="input_5_17_5_label">ZIP / Postal Code</label>
+                                            </span>
+                                            <span class="ginput_right address_country" id="input_5_17_6_container">
+                                                <select name="input_17.6" id="input_5_17_6" aria-required="true"
+                                                >
+                                                    <option value="" selected="selected"></option>
+                                                    <option value="Afghanistan">Afghanistan</option>
+                                                    <option value="Åland Islands">Åland Islands</option>
+                                                    <option value="Albania">Albania</option>
+                                                </select>
+                                                <label for="input_5_17_6" id="input_5_17_6_label">Country</label>
+                                            </span>
+                                            <div class="gf_clear gf_clear_complex"></div>
+                                        </div>
+                                    </li>
+                                    <li id="field_5_16"
+                                        class="gfield quote_data_field gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_16">Deadline<span
+                                                class="gfield_required">*</span></label>
+                                        <div class="ginput_container ginput_container_date">
+                                            <input name="input_16" id="input_5_16" type="text" value="06/13/2020"
+                                                   class="datepicker medium mdy datepicker_no_icon hasDatepicker"
+                                                   tabindex="136" aria-describedby="input_5_16_date_format">
+                                            <span id="input_5_16_date_format" class="screen-reader-text">Date Format: MM slash DD slash YYYY</span>
+                                        </div>
+                                        <input type="hidden" id="gforms_calendar_icon_input_5_16" class="gform_hidden"
+                                               value="https://www.printrenegades.com/wp-content/plugins/gravityforms/images/calendar.png">
+                                        <div class="gfield_description" id="gfield_description_5_16">A due date sooner 2
+                                            weeks from today's date may incur a rush fee
+                                        </div>
+                                    </li>
+                                    <li id="field_5_15"
+                                        class="gfield quote_data_field field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_15">Special Notes</label>
+                                        <div class="ginput_container ginput_container_textarea"><textarea
+                                                name="input_15" id="input_5_15" class="textarea small" tabindex="137"
+                                                aria-invalid="false" rows="10" cols="50"></textarea></div>
+                                    </li>
+                                    <li id="field_5_173"
+                                        class="gfield quote_data_field field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label">Upload Artwork</label>
+                                        <div class="ginput_container ginput_container_fileupload">
+                                            <div id="gform_multifile_upload_5_173" class="gform_fileupload_multifile"
+                                                 style="position: relative;">
+                                                <div id="gform_drag_drop_area_5_173" class="gform_drop_area"
+                                                     style="position: relative;">
+                                                    <span class="gform_drop_instructions">Drop files here or </span>
+                                                    <input id="gform_browse_button_5_173" type="file"
+                                                           value="Select files" class="button gform_button_select_files"
+                                                           aria-describedby="extensions_message_5_173" tabindex="138"
+                                                           style="position: relative; z-index: 1;">
+                                                </div>
+                                                <div id="html5_1e9j7aqdvld3saj11hb1okb21513_container"
+                                                     class="moxie-shim moxie-shim-html5"
+                                                     style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; overflow: hidden; z-index: 0;">
+                                                    <input id="html5_1e9j7aqdvld3saj11hb1okb21513" type="file"
+                                                           style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                                                           multiple="" accept=""></div>
+                                            </div>
+                                            <span id="extensions_message_5_173" class="screen-reader-text"></span>
+                                            <div class="validation_message">
+                                                <ul id="gform_multifile_messages_5_173">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="gform_preview_5_173"></div>
+                                        <div class="gfield_description" id="gfield_description_5_173">Original PSD or AI
+                                            files are preferred
+                                        </div>
+                                    </li>
+                                    <li id="field_5_176"
+                                        class="gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_visible">
+                                        <label class="gfield_label" for="input_5_176">Phone</label>
+                                        <div class="ginput_container"><input name="input_176" id="input_5_176"
+                                                                             type="text" value=""></div>
+                                        <div class="gfield_description" id="gfield_description__176">This field is for
+                                            validation purposes and should be left unchanged.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gform_page_footer left_label">
+                                <input type="button" id="gform_previous_button_5" class="gform_previous_button button goBackToPreFinish"
+                                       value="Previous" tabindex="139">
+                                <input type="submit" id="gform_submit_button_5" class="gform_button button confirmOrder"
+                                       value="Let's Do This!" tabindex="140">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end slide six -->
+
+        <!-- /div>
+    </div>
+
+
+</div -->
+
+
+    </div>
+</div>

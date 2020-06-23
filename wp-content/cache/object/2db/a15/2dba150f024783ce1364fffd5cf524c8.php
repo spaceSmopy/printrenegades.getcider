@@ -1,0 +1,1 @@
+½ñ^<?php exit; ?>a:1:{s:7:"content";a:4:{i:0;s:51:"/wp-content/themes/printrenegades/assets/js/main.js";i:1;s:89:"/wp-content/cache/asset-cleanup/js/item/main-vf34fb0d821d4a89f703018be97e1f539ac108de2.js";i:2;s:86:"https://printrenegades.getcider.com/wp-content/themes/printrenegades/assets/js/main.js";i:3;s:4:"main";}}

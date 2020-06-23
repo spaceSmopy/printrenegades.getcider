@@ -1,0 +1,64 @@
+.page__services{
+
+	.sidebar{
+		padding-top: 50px;
+
+		@media(max-width: $screen-md - $screen-diff){
+			padding-top: 25px;
+		}
+
+		&:before{
+			right: 0;
+		}
+
+		.sidebar-title{
+			font-size: 18px;
+			font-family: $font-family-futura-base;
+			text-transform: uppercase;
+			margin: 0 0 8px;
+
+			@media(max-width: $screen-md - $screen-diff){
+				display: none;
+			}
+		}
+
+		.sidebar-list{
+
+			@media(min-width: $screen-md){
+				margin-top: 36px;
+			}
+
+			li{
+
+				img{
+					max-width: 34px;
+					max-height: 30px;
+				}
+
+				a{
+					font-family: $font-family-bold;
+				}
+				
+			}
+		}
+		
+	}
+
+	.list_of_posts{
+		padding-top: 44px;
+		padding-bottom: 40px;
+
+		.service_additional_content{
+			p{
+				font-size: 16px;
+				line-height: 22px;
+				letter-spacing: -.5px;
+
+				@media(max-width: $screen-sm - $screen-diff){
+					letter-spacing: 0;
+				}
+			}
+		}
+
+	}
+}

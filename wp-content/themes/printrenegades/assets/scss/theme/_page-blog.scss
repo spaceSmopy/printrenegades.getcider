@@ -1,0 +1,148 @@
+.page__blog{
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	@media(max-width: $screen-md - $screen-diff){
+		padding-top: 28px;
+	}
+
+	.sidebar{
+		
+		.sticky-scroll{
+			@media(min-width: $screen-md){
+				position: sticky;
+				top: 30px;
+			}
+		}
+
+		.widget{
+			margin-bottom: 20px;
+
+			&.widget_search{
+				.search-form{
+					position: relative;
+
+					label{
+						margin: 0;
+						width: 100%;
+
+						.search-field{
+							font-family: $font-family-italic;
+							font-size: 16px;
+							line-height: 27px;
+							text-transform: lowercase;
+							color: #999;
+							height: 42px;
+							padding: 5px 40px 5px 10px;
+							border: 1px solid #cacaca;
+							border-radius: 0;
+							background-color: #fefefe;
+							box-shadow: inset 0 1px 2px hsla(0,0%,4%,.1);
+							outline: none;
+							&:focus{
+								border-color: #8a8a8a;
+								box-shadow: 0 0 5px #cacaca;
+							}
+						}
+					}
+
+					.search-submit{
+						font-size: 0;
+						padding: 21px;
+						background: url(assets/images/search_icon.png) no-repeat 50%;
+						border: none;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: 0;
+					}
+				}
+			}
+
+			&.widget_text{
+				h5{
+					font-family: $font-family-bold;
+					font-size: 14px;
+					line-height: 27px;
+					margin: 0 0 12px;
+				}
+				.textwidget{
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+
+	}
+
+	.list_of_posts{
+		
+		.blog_post--title{
+			margin: 0 0 10px;
+			font-size: 40px;
+			line-height: 1.4;
+			text-transform: uppercase;
+			color: $gray-dark;
+			font-family: $font-family-futura-base;
+
+			@media(max-width: $screen-md - $screen-diff){
+				font-size: 32px;
+			}
+			@media(max-width: $screen-xs - $screen-diff){
+				font-size: 28px;
+			}
+
+			a{
+				color: inherit;
+				&:hover{
+					color: $cs-green;
+				}
+			}
+
+		}
+
+		.navigation.pagination{
+			margin: 35px 0 15px;
+			
+			.nav-links{
+				margin: auto;
+				display: flex;
+
+				.page-numbers{
+					font-family: $font-family-medium;
+					font-size: .875rem;
+					color: #0a0a0a;
+					padding: .1875rem .625rem;
+					margin-right: 5px;
+					&:hover{
+						background: #e6e6e6;
+						color: $cs-green-dark;
+					}
+
+					&.next{
+						font-size: 0;
+						position: relative;
+
+						&:before{
+							content: '';
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							background: url(assets/images/pagination-next.png) 50% no-repeat;
+							background-size: 9px;
+						}
+					}
+
+					&.current{
+						background: $cs-green;
+						color: $white;
+					}
+				}
+			}
+		}
+
+	}
+
+}

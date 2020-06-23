@@ -1,0 +1,39 @@
+.services{
+	.elementor-column-gap-default .elementor-row{
+		.service-item{
+			&:hover .elementor-element-populated{
+				border-color: $cs-green;
+			}
+			@media(max-width: $screen-sm - $screen-diff){
+				width: 50%;
+			}
+			.elementor-element-populated{
+				padding: 30px;
+				margin: 15px;
+				background: $white;
+				box-shadow: 0px 0px 10px rgba(0, 154, 118, 0.15);
+				border: 1px solid transparent;
+				@media(max-width: $tablet){
+					padding: 15px;
+				}
+			}
+			.elementor-image{
+				img{
+					width: auto;
+					max-height: 61px;
+				}
+			}
+			.elementor-widget-heading .elementor-heading-title{
+				font-size: 16px;
+				line-height: 19px;
+				color: $gray-dark;
+				@media(max-width: $tablet){
+					font-size: 13px;
+				}
+				a:hover{
+					color: $cs-green;
+				}
+			}
+		}
+	}
+}

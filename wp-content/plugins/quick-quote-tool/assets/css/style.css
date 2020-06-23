@@ -1,0 +1,1381 @@
+/*fontawesome*/
+@import url(/wp-content/plugins/quick-quote-tool/assets/fontawesome/css/font-awesome.min.css);
+
+/*begin fonts*/
+@font-face {
+	font-family: "GothamProRegular";
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProRegular.eot");
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProRegular.woff") format("woff"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "GothamProMedium";
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProMedium.eot");
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProMedium.woff") format("woff"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "GothamProBold";
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBold.eot");
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBold.eot?#iefix")format("embedded-opentype"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBold.woff") format("woff"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "GothamProBlack";
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBlack.eot");
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBlack.eot?#iefix")format("embedded-opentype"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBlack.woff") format("woff"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProBlack.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "GothamProItalic";
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProItalic.eot");
+	src: url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProItalic.eot?#iefix")format("embedded-opentype"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProItalic.woff") format("woff"),
+	url("/wp-content/plugins/quick-quote-tool/assets/fonts/GothamPro/GothamProItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+/*end fonts*/
+
+body{
+	margin: 0;
+}
+
+.quote-cont{
+	background: rgba( 0, 0, 0, 0.60 );
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quote-cont .quote{
+	width: 70%;
+	max-width: 500px;
+	max-height: 85%;
+	display: flex;
+	flex-direction: column;
+	padding: 18px;
+	border: 6px solid #009a76;
+	border-radius: 3px;
+	box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1.00 );
+	background: #fefefe;
+	position: relative;
+}
+
+/*begin mixins*/
+.quote-cont .quote a{
+	text-decoration: none;
+	transition: .3s;
+}
+
+.quote-cont .quote img{
+	max-width: 100%;
+	height: auto;
+}
+/*end mixins*/
+
+.quote-cont .quote .quote-close-btn{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -24px;
+	right: -24px;
+	color: #fff;
+	font-size: 27px;
+	font-weight: bold;
+	text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 );
+	text-align: center;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 );
+	background-color: rgba( 0, 0, 0, 1.00 );
+	line-height: 30px;
+}
+
+.quote-cont .quote .quote-header{
+	font-family: GothamProRegular, sans-serif;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 36px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 );
+	margin: 0 0 30px;
+	background: #009a76;
+	border-radius: 15px;
+}
+@media(max-width: 767px){
+	.quote-cont .quote .quote-header{
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+
+/*begin slide one*/
+.quote-cont .quote .product-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.quote-cont .quote .product-list .product-list__item{
+	width: 30%;
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px 5px;
+	border-radius: 15px;
+}
+.quote-cont .quote .product-list .product-list__item:hover{
+	box-shadow: 0 0 10px #009a76;
+}
+.quote-cont .quote .product-list .product-list__item .product-item__header{
+	font-size: 16px;
+	font-weight: 600;
+	font-family: GothamProMedium, sans-serif;
+	color: #000;
+	margin: 15px 0 0;
+}
+@media(max-width: 767px){
+	.quote-cont .quote .product-list{
+		padding: 0 10px;
+		overflow: auto;
+	}
+	.quote-cont .quote .product-list .product-list__item{
+		width: 100%;
+	}
+}
+/*end slide one*/
+
+/*begin slide two*/
+.product-checked{
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+.product-checked .product-item{
+	display: none;
+}
+
+.product-checked .product-item .product-item__header{
+	text-align: center;
+	font-family: GothamProMedium, sans-serif;
+}
+.product-checked .product-item .product-item__header .product-item__name{
+	font-size: 28px;
+	font-weight: 400;
+	color: #000;
+	margin: 15px 0 5px;
+}
+.product-checked .product-item .product-item__header .product-item__text{
+	font-size: 14px;
+	font-weight: 100;
+	color: gray;
+	margin: 0 0 15px;
+}
+.product-checked .product-item .product-item__header .product-item__text.red{
+	font-family: GothamProRegular, sans-serif;
+	color: #a4000b
+}
+
+.product-checked .product-item .product-item-form{
+	display: flex;
+	flex-direction: column;
+}
+.product-checked .product-item .product-item-form .form-item{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+	overflow: hidden;
+}
+
+.product-checked .product-item .product-item-form .form-item .form-item__header{
+	min-width: 25%;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	transition: .3s;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__header:after{
+	font-family: FontAwesome;
+	content:"\f05d";
+	font-size: 20px;
+	color: #009a76;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	transition: .3s;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__header.active:after{
+	opacity: 1;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__header .form-item__img{
+	max-width: 100px;
+	display: block;
+	margin: auto;
+	opacity: .75;
+	transition: .3s;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__header.active .form-item__img{
+	opacity: 1;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__header .form-item__name{
+	font-family: GothamProBold, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	color: #000;
+	margin: 5px 0 0;
+}
+
+.product-checked .product-item .product-item-form .navigation{
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0 0;
+	margin-top: 30px;
+	border-top: 1px solid #ccc;
+	background: #fefefe;
+	position: sticky;
+	bottom: 0;
+	z-index: 100;
+}
+.product-checked .product-item .product-item-form .navigation .btn{
+	font-size: 14px;
+	font-family: GothamProRegular, sans-serif;
+	padding: 10px 20px;
+	border: 2px solid #009a76;
+}
+.product-checked .product-item .product-item-form .navigation .btn:hover{
+	background:  #00674f;
+	border-color: #00674f;
+}
+.product-checked .product-item .product-item-form .navigation .previous-btn{
+	color: #009a76;
+	background: #fff;
+}
+.product-checked .product-item .product-item-form .navigation .previous-btn:hover{
+	color: #fff;
+}
+.product-checked .product-item .product-item-form .navigation .quote-btn{
+	color: #fff;
+	background: #009a76;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.product-checked .product-item .product-item-form .form-item .form-item__input{
+	display: none;
+	min-width: 75%;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .row{
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .row + .row{
+	margin-top: 15px;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .label{
+	font-family: GothamProBold, sans-serif;
+	font-size: 16px;
+	text-align: right;
+	margin-right: 15px;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .label.checkbox{
+	font-size: 13px;
+	cursor: pointer;
+	user-select: none;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont{
+	position: relative;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont:after{
+	font-family: FontAwesome;
+	content: '\f0ab';
+	font-size: 30px;
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: .3s;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont.active:after{
+	content: "\f058";
+	color: #009a76;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont.error:after{
+	content: "\f057";
+	color: #af0000;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont select,
+.product-checked .product-item .product-item-form .form-item .form-item__input .input-cont input{
+	font-size: 12px;
+	font-family: GothamProRegular, sans-serif;
+	padding: 10px 40px 10px 5px;
+	width: 200px;
+	color: #6b6464;
+	background: #f0f0f0;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0 !important;
+    height: 40px;
+    font-size: 12px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont select{
+	cursor: pointer;
+	transition: .3s;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .input-cont input{
+	padding-right: 0;
+}
+.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont select:focus,
+.product-checked .product-item .product-item-form .form-item .form-item__input .input-cont input:focus{
+	outline: none;
+	border-color: #8a8a8a;
+	box-shadow: 0 0 5px #cacaca;
+}
+@media(min-width: 768px){
+	.product-checked .product-item .product-item-form .form-item .form-item__header{
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__header.active{
+		margin-left: 0;
+		transform: translateX(0);
+	    align-self: flex-start;
+	}
+}
+@media(max-width: 767px){
+	.product-checked .product-item .product-item__header img{
+		max-width: 100px;
+	}
+	.product-checked .product-item .product-item__header .product-item__name{
+		font-size: 20px;
+	}
+	.product-checked .product-item .product-item-form .navigation .btn{
+		padding: 5px 10px;
+	}
+	.product-checked .product-item .product-item-form .form-item{
+		flex-direction: column;
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__header,
+	.product-checked .product-item .product-item-form .form-item .form-item__input{
+		min-width: 100%;
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__header{
+		margin-bottom: 15px;
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__header:after{
+		right: 30%;
+		transform: translateX(50%);
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__input .row{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__input .row + .row{
+		flex-direction: row;
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__input .label{
+		font-size: 14px;
+		text-align: left;
+		margin: 0 0 10px;
+	}
+	.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont,
+	.product-checked .product-item .product-item-form .form-item .form-item__input .input-cont,
+	.product-checked .product-item .product-item-form .form-item .form-item__input .select-cont select,
+	.product-checked .product-item .product-item-form .form-item .form-item__input .input-cont input{
+		width: 100%;
+	}
+}
+/*end slide two*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*begin admin settings page*/
+.quickQuoteToolPluginSettingsFormSelector{
+	margin-top: 20px;
+}
+.quickQuoteToolPluginSettingsFormSelector button{
+	background-color: lightgrey;
+	padding: 3px 12px;
+	cursor: pointer;
+	border: 1px solid lightgrey;
+}
+.quickQuoteToolPluginSettingsFormSelector button:hover, .quickQuoteToolPluginSettingsFormSelector button.active{
+	background-color: whitesmoke;
+	border: 1px solid grey;
+}
+.quickQuoteToolPluginSettingsForm{
+	display: none;
+}
+.quickQuoteToolPluginSettingsForm.active{
+	display: block;
+}
+/*end admin settings page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! CSS Used from: https://www.printrenegades.com/wp-content/themes/printrenegadesdev/css/foundation.min.css?ver=6.3.0 ; media=all */
+@media all{
+	img{border-style:none;}
+	input,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0;}
+	select{text-transform:none;}
+	[type=submit],html [type=button]{-webkit-appearance:button;}
+	[type=button]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0;}
+	[type=button]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText;}
+	input{overflow:visible;}
+	[type=checkbox],[type=radio]{box-sizing:border-box;padding:0;}
+	textarea{overflow:auto;}
+	*,:after,:before{box-sizing:inherit;}
+	img{display:inline-block;vertical-align:middle;max-width:100%;height:auto;-ms-interpolation-mode:bicubic;}
+	textarea{height:auto;min-height:50px;border-radius:0;}
+	select{width:100%;border-radius:0;}
+	div,form,h2,li,td,th,ul{margin:0;padding:0;}
+	h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility;}
+	h2{line-height:1.4;margin-top:0;margin-bottom:.5rem;}
+	h2{font-size:1.25rem;}
+	@media print,screen and (min-width:641px){
+		h2{font-size:2.5rem;}
+	}
+	ul{margin-bottom:1rem;list-style-position:outside;line-height:1.6;}
+	li{font-size:inherit;}
+	ul{list-style-type:disc;}
+	ul{margin-left:1.25rem;}
+	ul ul{margin-left:1.25rem;margin-bottom:0;}
+	@media print{
+		*{background:transparent!important;box-shadow:none!important;color:#000!important;text-shadow:none!important;}
+		thead{display:table-header-group;}
+		img,tr{page-break-inside:avoid;}
+		img{max-width:100%!important;}
+		h2{orphans:3;widows:3;}
+		h2{page-break-after:avoid;}
+	}
+	[type=text],textarea{display:block;box-sizing:border-box;width:100%;height:2.4375rem;margin:0 0 1rem;padding:.5rem;border:1px solid #cacaca;border-radius:0;background-color:#fefefe;box-shadow:inset 0 1px 2px hsla(0,0%,4%,.1);font-family:inherit;font-size:1rem;font-weight:400;color:#0a0a0a;transition:box-shadow .5s,border-color .25s ease-in-out;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+	[type=text]:focus,textarea:focus{outline:none;border:1px solid #8a8a8a;background-color:#fefefe;box-shadow:0 0 5px #cacaca;transition:box-shadow .5s,border-color .25s ease-in-out;}
+	textarea{max-width:100%;}
+	textarea[rows]{height:auto;}
+	input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#cacaca;}
+	input::-moz-placeholder,textarea::-moz-placeholder{color:#cacaca;}
+	input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#cacaca;}
+	input::placeholder,textarea::placeholder{color:#cacaca;}
+	input:disabled,input[readonly],textarea:disabled{background-color:#e6e6e6;cursor:not-allowed;}
+	[type=button],[type=submit]{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;}
+	[type=checkbox],[type=file],[type=radio]{margin:0 0 1rem;}
+	[type=checkbox]+label,[type=radio]+label{display:inline-block;vertical-align:baseline;margin-left:.5rem;margin-right:1rem;margin-bottom:0;}
+	[type=checkbox]+label[for],[type=radio]+label[for]{cursor:pointer;}
+	[type=file]{width:100%;}
+	label{display:block;margin:0;font-size:.875rem;font-weight:400;line-height:1.8;color:#0a0a0a;}
+	select{height:2.4375rem;margin:0 0 1rem;padding:.5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:1px solid #cacaca;border-radius:0;background-color:#fefefe;font-family:inherit;font-size:1rem;line-height:normal;color:#0a0a0a;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");background-origin:content-box;background-position:right -1rem center;background-repeat:no-repeat;background-size:9px 6px;padding-right:1.5rem;transition:box-shadow .5s,border-color .25s ease-in-out;}
+	@media screen and (min-width:0\0){
+		select{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==");}
+	}
+	select:focus{outline:none;border:1px solid #8a8a8a;background-color:#fefefe;box-shadow:0 0 5px #cacaca;transition:box-shadow .5s,border-color .25s ease-in-out;}
+	select:disabled{background-color:#e6e6e6;cursor:not-allowed;}
+	select::-ms-expand{display:none;}
+	.button{display:inline-block;vertical-align:middle;margin:0 0 1rem;padding:.85em 1em;-webkit-appearance:none;border:1px solid transparent;border-radius:0;transition:background-color .25s ease-out,color .25s ease-out;font-size:.9rem;line-height:1;text-align:center;cursor:pointer;background-color:#2ba6cb;color:#fefefe;}
+	.button:focus,.button:hover{background-color:#258dad;color:#fefefe;}
+	table{width:100%;margin-bottom:1rem;border-radius:0;background-color:#fff;border-collapse:collapse;}
+	table tbody,table thead,table th,table td{border:1px solid #f1f1f1;background-color:transparent;}
+	table thead tr{background-color:#f8f8f8;}
+	table thead th{padding:.5rem .625rem .625rem;font-weight:700;text-align:left;}
+	table tbody td{padding:.5rem .625rem .625rem;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/themes/printrenegadesdev/css/custom.css ; media=all */
+@media all{
+	.gform_wrapper ul{list-style:none;}
+	.gform_fields{margin:0;}
+	.gfield{list-style:none;margin-bottom:20px;}
+	.gfield_label{display:none;}
+	.ginput_container ul{margin-left:0;}
+	.gfield_description{margin-top:10px;}
+	.validation_message{margin-bottom:10px;color:#990000;display:none;}
+	input:-moz-placeholder,textarea:-moz-placeholder{color:#555;}
+	input::-moz-placeholder,textarea::-moz-placeholder{color:#555;}
+	input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#555;}
+	input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#555;}
+	[type=text],textarea{margin-bottom:0;font-family:"GothamProRegular", sans-serif;font-size:14px;color:#333;}
+	textarea[rows]{height:150px;max-width:100%;}
+	select::-ms-expand{display:none;}
+	select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/images/select_arrow.png");background-repeat:no-repeat;background-position:100% 70%;background-size:15px;cursor:pointer;}
+	[type=checkbox],[type=file],[type=radio]{margin-bottom:0;}
+	.button,input[type='submit']{border:none;padding:10px 20px;margin-bottom:0;background-color:#009a76;color:#fff;font-family:"Open Sans", sans-serif;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;}
+	.button:hover,.button:focus,input[type='submit']:hover,input[type='submit']:focus{background-color:#00674f;}
+	h2{font-family:"GothamProMedium", sans-serif;}
+	h2{font-family:"GothamProMedium", sans-serif;color:inherit;}
+	h2{font-size:40px;}
+	.button{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+	table tbody,table thead,table th,table td{border:none;}
+	table{width:100%!important;border:1px solid #f1f1f1;}
+	table tbody td{text-align:center;padding:12px 5px;}
+	table tbody tr:first-child td{background:#f5f5f5;}
+	table tbody tr td:first-child{text-align:left;}
+	@media (max-width: 767px){
+		table tbody tr:first-child td{background:transparent;}
+		table tbody tr td:first-child{background:#f5f5f5;}
+		table tbody tr td:not(:last-child){border-right:1px solid #f1f1f1;}
+	}
+	@media (max-width: 480px){
+		table tbody td{font-size:14px;}
+	}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/themes/printrenegadesdev/style.css ; media=all */
+@media all{
+	[type='text'],select,textarea,textarea:focus{margin-bottom:20px!important;background:#F0F0F0!important;color:#6B6464!important;font-size:18px;font-family:"GothamProMedium", sans-serif;border:none;border-radius:10px;}
+	.gfield_label{display:none!important;}
+	input::-moz-placeholder,textarea::-moz-placeholder,input::-webkit-placeholder,textarea::-webkit-placeholder,input::-ms-placeholder,textarea::-ms-placeholder{color:#6B6464;}
+	input::placeholder,textarea::placeholder{color:#6B6464;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.4.17 ; media=all */
+@media all{
+	.gform_wrapper select,.gform_wrapper textarea{font-size:inherit;font-family:inherit;letter-spacing:normal;}
+	.gform_wrapper{margin-bottom:16px;margin-top:16px;max-width:100%;}
+	.gform_wrapper form{text-align:left;max-width:100%;margin:0 auto;}
+	.gform_wrapper *,.gform_wrapper :after,.gform_wrapper :before{box-sizing:border-box!important;}
+	.gform_wrapper h2{font-weight:400;border:none;background:0 0;}
+	.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){font-size:inherit;font-family:inherit;padding:5px 4px;letter-spacing:normal;}
+	.gform_wrapper textarea{padding:6px 8px;line-height:1.5;resize:none;}
+	.gform_wrapper select{line-height:1.5;}
+	.gform_wrapper ul.gform_fields{margin:0!important;list-style-type:none;display:block;}
+	.gform_wrapper ul{text-indent:0;}
+	.gform_wrapper form li,.gform_wrapper li{margin-left:0!important;list-style:none!important;overflow:visible;}
+	.gform_wrapper ul li.gfield{clear:both;}
+	.gform_wrapper ul.gfield_checkbox li,.gform_wrapper ul.gfield_radio li{overflow:hidden;}
+	.gform_wrapper form ul.gform_fields.left_label li.gfield,.gform_wrapper ul.gform_fields.left_label li.gfield{margin-bottom:14px;}
+	.gform_wrapper form ul.left_label li ul.gfield_checkbox li,.gform_wrapper form ul.left_label li ul.gfield_radio li,.gform_wrapper ul.left_label li ul.gfield_checkbox li,.gform_wrapper ul.left_label li ul.gfield_radio li{margin-bottom:10px;}
+	.gform_wrapper ul li:after,.gform_wrapper ul li:before,.gform_wrapper ul.gform_fields{padding:0;margin:0;overflow:visible;}
+	.gform_wrapper select option{padding:2px;display:block;}
+	.gform_wrapper .ginput_complex.ginput_container{overflow:visible;width:100%;}
+	.gform_wrapper label.gfield_label{font-weight:700;font-size:inherit;}
+	.gform_wrapper .ginput_complex .ginput_left input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),.gform_wrapper .ginput_complex .ginput_right input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),.gform_wrapper .ginput_complex .ginput_right select,.gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),.gform_wrapper .ginput_complex select{width:100%;}
+	.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label{display:block;font-size:.813em;letter-spacing:.5pt;white-space:nowrap;}
+	.gform_wrapper ul.gfield_checkbox li label,.gform_wrapper ul.gfield_radio li label{display:-moz-inline-stack;display:inline-block;letter-spacing:inherit;vertical-align:middle;cursor:pointer;}
+	.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label{margin:1px 0 9px 1px;}
+	body .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,body .gform_wrapper ul li.field_description_below div.ginput_container_radio{margin-top:16px;margin-bottom:0;}
+	.gform_wrapper .hidden_label .gfield_label{clip:rect(1px,1px,1px,1px);position:absolute!important;height:1px;width:1px;overflow:hidden;}
+	.gform_wrapper li.hidden_label input{margin-top:12px;}
+	.gform_wrapper .screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important;}
+	.gform_wrapper input.large,.gform_wrapper input.medium,.gform_wrapper select.large{width:100%;}
+	.gform_wrapper textarea.small{height:80px;width:100%;}
+	.gform_wrapper h2.gsection_title{margin:0!important;padding:0!important;letter-spacing:normal!important;}
+	.gform_wrapper h2.gsection_title{font-weight:700;font-size:1.25em;}
+	.gform_wrapper li.gfield.field_description_below+li.gsection{margin-top:24px!important;}
+	.gform_wrapper .gsection{border-bottom:1px solid #CCC;padding:0 16px 8px 0;margin:28px 0;clear:both;}
+	.gform_wrapper ul.gfield_checkbox li input[type=checkbox],.gform_wrapper ul.gfield_radio li input[type=radio]{width:auto!important;}
+	.gform_wrapper ul.gfield_checkbox,.gform_wrapper ul.gfield_radio{margin:6px 0;padding:0;}
+	.gform_wrapper .gfield_checkbox li label,.gform_wrapper .gfield_radio li label{display:-moz-inline-stack;display:inline-block;padding:0;width:auto;line-height:1.5;font-size:.875em;vertical-align:middle;max-width:85%;white-space:normal;}
+	.gform_wrapper .gfield_checkbox li label{margin:0;}
+	.gform_wrapper .gfield_radio li label{margin:2px 0 0 4px;}
+	.gform_wrapper .gfield_checkbox li input,.gform_wrapper .gfield_checkbox li input[type=checkbox],.gform_wrapper .gfield_radio li input[type=radio]{display:-moz-inline-stack;display:inline-block;vertical-align:middle;margin-left:1px;}
+	.gform_wrapper .gfield_description{font-size:.813em;line-height:inherit;clear:both;font-family:inherit;letter-spacing:normal;}
+	.gform_wrapper .gfield_description{padding:0 16px 0 0;}
+	.gform_wrapper .field_description_below .gfield_description{padding-top:16px;}
+	.gform_wrapper .gfield_description{width:100%;}
+	.gform_wrapper .gfield_required{color:#790000;margin-left:4px;}
+	.gform_wrapper .validation_message{color:#790000;font-weight:700;letter-spacing:normal;}
+	.gform_wrapper .gform_page_footer input.button,.gform_wrapper .gform_page_footer input[type=submit]{font-size:1em;width:100%;margin:0 0 16px;}
+	.gform_wrapper .ginput_complex .ginput_full,.gform_wrapper .ginput_complex .ginput_left,.gform_wrapper .ginput_complex .ginput_right{min-height:45px;}
+	.gform_wrapper .ginput_complex .ginput_full input[type=text]{width:100%;}
+	.gform_wrapper .gfield_checkbox li,.gform_wrapper .gfield_radio li{position:relative;margin:0 0 16px;line-height:1.2;}
+	.gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked+label,.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label{font-weight:700;}
+	.gform_wrapper .gform_hidden,.gform_wrapper input.gform_hidden,.gform_wrapper input[type=hidden]{display:none!important;max-height:1px!important;overflow:hidden;}
+	.gform_wrapper ul.gfield_checkbox li,.gform_wrapper ul.gfield_radio li{padding:0!important;}
+	.gform_wrapper li.gfield_html{max-width:100%;}
+	.gform_wrapper .gfield_html.gfield_no_follows_desc{margin-top:10px;}
+	.gform_validation_container,.gform_wrapper .gform_validation_container,body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,body .gform_wrapper li.gform_validation_container,body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container{display:none!important;position:absolute!important;left:-9000px;}
+	.gform_wrapper .gform_page_footer{margin:14px 0;width:100%;border-top:1px dotted #CCC;padding:16px 0 0;clear:both;}
+	.gform_wrapper .gform_page_footer.left_label{padding:16px 0 0 29%;}
+	.gform_wrapper .gform_page_footer .button.gform_next_button,.gform_wrapper .gform_page_footer .button.gform_previous_button{display:-moz-inline-stack;display:inline-block;}
+	.gform_wrapper .gform_page_footer .button.gform_previous_button{margin-bottom:8px;}
+	.gform_wrapper table.gfield_list,.gform_wrapper table.gfield_list tbody,.gform_wrapper table.gfield_list td,.gform_wrapper table.gfield_list th,.gform_wrapper table.gfield_list thead,.gform_wrapper table.gfield_list tr{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;}
+	.gform_wrapper table.gfield_list{border-spacing:0;border-collapse:collapse;table-layout:auto!important;}
+	.gform_wrapper table.gfield_list thead th{font-weight:700;text-align:left;}
+	.gform_wrapper table.gfield_list colgroup{width:100%;display:block;}
+	.gform_wrapper table.gfield_list thead,.gform_wrapper table.gfield_list tr{padding:0;margin:0;}
+	.gform_wrapper table.gfield_list td,.gform_wrapper table.gfield_list th{padding:4px 0;}
+	.gform_wrapper ul.gform_fields:not(.top_label) table.gfield_list th{padding:0 0 4px;}
+	.gform_wrapper table.gfield_list td+td,.gform_wrapper table.gfield_list th+th{padding:0 0 0 16px;}
+	.gform_wrapper .gfield_list,.gform_wrapper .gfield_list td.gfield_list_cell input{width:100%;}
+	.gform_wrapper .gform_fileupload_multifile .gform_drop_area{padding:24px;border:1px dashed #CCC;text-align:center;color:#AAA;margin-bottom:16px;background:rgba(0,0,0,.02);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+	.gform_wrapper span.gform_drop_instructions{display:block;margin-bottom:8px;}
+	body .gform_wrapper ul li.gfield{margin-top:16px;padding-top:0;}
+	body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html{line-height:inherit;}
+	@media only screen and (max-width:641px){
+		.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]){line-height:2;min-height:2rem;}
+		.gform_wrapper textarea{line-height:1.5;}
+		.gform_wrapper .ginput_container span:not(.ginput_price){margin-bottom:8px;display:block;}
+		.gform_wrapper li.field_sublabel_below .ginput_complex{margin-top:12px!important;}
+		.gform_wrapper ul.gfield_checkbox li label,.gform_wrapper ul.gfield_radio li label{width:85%;cursor:pointer;}
+	}
+	@media only screen and (max-width:761px),(min-device-width:768px) and (max-device-width:1023px){
+		.gform_wrapper table.gfield_list{border:0;}
+		.gform_wrapper table.gfield_list thead{position:absolute;top:-9999px;left:-9999px;}
+		.gform_wrapper table.gfield_list tr{margin-bottom:10px;display:block;background:#fff;position:relative;border:1px solid #CCC;border-top:2px solid #CCC;border-bottom:4px solid #CCC;}
+		.gform_wrapper table.gfield_list td{display:block;margin-left:8px;margin-right:8px;}
+		.gform_wrapper ul.gform_fields.form_sublabel_below table.gfield_list td:after{content:attr(data-label);font-size:.875em;letter-spacing:.5pt;white-space:nowrap;display:block;clear:both;}
+		.gform_wrapper ul.gform_fields.form_sublabel_below table.gfield_list td:after{margin:3px 0 8px 8px;}
+		.gform_wrapper table.gfield_list td+td,.gform_wrapper table.gfield_list th+th{padding:4px 0 0;}
+		.gform_wrapper table.gfield_list tr.gfield_list_row_odd{margin:16px 0;}
+		.gform_wrapper table.gfield_list tr,.gform_wrapper table.gfield_list tr.gfield_list_row_odd:first-child{padding-top:12px;}
+		.gform_wrapper .gfield_list td.gfield_list_cell input{width:calc(100% - 16px);margin-left:8px;margin-right:8px;}
+	}
+	@media only screen and (min-width:641px){
+		.gform_wrapper .gform_body{width:100%;}
+		.gform_wrapper .gfield_checkbox li,.gform_wrapper .gfield_radio li{margin:0 0 8px;line-height:1.3;}
+		.gform_wrapper .gsection{margin:28px 16px 28px 0;}
+		.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label{float:left;width:29%;padding-right:16px;margin-bottom:16px;}
+		.gform_wrapper .left_label .gfield_description{width:70%;}
+		.gform_wrapper form ul.left_label li ul.gfield_checkbox li,.gform_wrapper form ul.left_label li ul.gfield_radio li,.gform_wrapper ul.left_label li ul.gfield_checkbox li,.gform_wrapper ul.left_label li ul.gfield_radio li{margin-bottom:10px;}
+		.gform_wrapper .left_label .gfield_description{margin-left:29%;}
+		.gform_wrapper form ul.gform_fields:not(.top_label) li.gfield_html_formatted{margin-left:29%!important;width:70%;}
+		.gform_wrapper ul.gform_fields:not(.top_label) ul.gfield_checkbox,.gform_wrapper ul.gform_fields:not(.top_label) ul.gfield_radio{overflow:hidden;}
+		.gform_wrapper .left_label div.ginput_complex{width:70%;margin-left:29%;}
+		.gform_wrapper .left_label input.medium{width:calc(35% - 8px);}
+		.gform_wrapper .left_label input.large,.gform_wrapper .left_label select.large,.gform_wrapper .left_label textarea.small{width:70%;}
+		.gform_wrapper ul.gform_fields:not(.top_label) .ginput_list{width:70%;margin-left:29%!important;}
+		.gform_wrapper .left_label li.hidden_label input{margin-left:3.7%;}
+		.gform_wrapper .hidden_label input.large{width:100%;}
+		.gform_wrapper textarea.small{height:80px;width:100%;}
+		.gform_wrapper .ginput_complex .ginput_left,.gform_wrapper .ginput_complex .ginput_right{width:50%;display:-moz-inline-stack;display:inline-block;vertical-align:top;margin:0 -4px 0 0;}
+		.gform_wrapper .gform_page_footer input.button,.gform_wrapper .gform_page_footer input[type=submit]{font-size:1em;width:auto;margin:0 16px 0 0;}
+		.gform_wrapper ul.gform_fields li.gfield{padding-right:16px;}
+		.gform_wrapper .ginput_complex .ginput_left{padding-right:8px;}
+		.gform_wrapper .left_label .ginput_complex.ginput_container_address:after{content:"";display:block;}
+		.gform_wrapper .ginput_complex.ginput_container_address .ginput_left{margin-right:8px;}
+		.gform_wrapper .ginput_complex.ginput_container_address .ginput_right{margin-right:-8px;padding-right:8px;}
+		.gform_wrapper .ginput_complex.ginput_container_address span.ginput_right+span.ginput_left{padding-right:8px!important;margin-right:-8px;}
+		.gform_wrapper .ginput_complex.ginput_container_address span.ginput_right+span.ginput_left.address_zip{margin-right:8px;}
+		html:not([dir=rtl]) .gform_wrapper ul.gform_fields:not(.top_label) .gfield_description,html:not([dir=rtl]) .gform_wrapper ul.gform_fields:not(.top_label) .ginput_container:not(.ginput_container_time):not(.ginput_container_date){width:70%;margin-left:29%;}
+		.gform_wrapper ul.gform_fields:not(.top_label) .gform_fileupload_multifile .gform_drop_area{margin-left:29%;width:70%;}
+		.gform_wrapper .gform_page_footer .button.gform_previous_button{margin-bottom:0;}
+		.gform_wrapper .gform_page_footer .button.gform_button,.gform_wrapper .gform_page_footer .button.gform_next_button{margin-right:10px;}
+	}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.4.17 ; media=all */
+@media all{
+	@media only screen and (min-width:641px){
+		.gform_wrapper ul.gform_fields:not(.top_label) li ul.gfield_checkbox,.gform_wrapper ul.gform_fields:not(.top_label) li ul.gfield_radio{width:calc(70% + 16px);}
+	}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.4.17 ; media=all */
+@media all{
+	.gform_wrapper.gf_browser_chrome ul li:after,.gform_wrapper.gf_browser_chrome ul li:before{content:none;}
+	.gform_wrapper.gf_browser_chrome select{padding:2px 0 2px 3px;}
+	.gform_wrapper.gf_browser_chrome .ginput_complex .ginput_right select,.gform_wrapper.gf_browser_chrome .ginput_complex select{text-indent:2px;line-height:1.5em;margin-bottom:5px;margin-top:2px;}
+	.gform_wrapper.gf_browser_chrome .gfield_checkbox li input,.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio]{margin-top:6px;}
+	.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio],.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select{margin-left:1px;}
+	.gform_wrapper.gf_browser_chrome input.button.gform_button_select_files{padding:6px 12px!important;}
+	.gform_wrapper.gf_browser_chrome span.address_country{margin-top:-2px;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms-addon-quickquotetool/css/quick-quote-form.min.css?ver=1.0.0 */
+#gform_5{color:#000!important;}
+#gform_5 .gform_fields label{max-width:100%;padding-right:0;color:#000!important;}
+#gform_wrapper_5.gform_wrapper .left_label input.large,#gform_wrapper_5.gform_wrapper .left_label select.large{width:100%;}
+#gform_5 .gfield_checkbox,#gform_5 .gfield_radio{display:flex;flex-wrap:wrap;justify-content:space-around;width:100%!important;text-align:center;}
+#gform_5 .gfield_checkbox li,#gform_5 .gfield_radio li{width:100%;}
+#gform_5 .gfield_checkbox input,#gform_5 .gfield_radio input{visibility:hidden;position:absolute;}
+#gform_5 .gfield_html{margin:0!important;text-align:center;width:100%;padding:0;}
+#gform_5 .gfield_html h2{font-size:28px;text-align:center;margin-bottom:1em;width:100%;color:#000;}
+#gform_5 .gfield_required{display:none;}
+#gform_5 .ginput_container.ginput_container_radio li{text-align:center;}
+#gform_5 .left_label .quote_data_field label{display:block!important;}
+#gform_5 .left_label .gfield label img{opacity:.75;transition:450ms all;border-radius:25px;width:100px;height:auto;object-fit:cover;}
+#gform_5 .left_label .gfield input:checked~label img{opacity:1;}
+#gform_5 .ginput_container_number,#gform_5 .ginput_container_select{position:relative;width:95%;margin-left:5%;margin-top:7%;}
+#gform_5 .ginput_container_number.choice-selected:after,#gform_5 .ginput_container_select:after{font-family:FontAwesome;display:inline-block;color:#fff;width:25px;text-align:center;position:absolute;right:10px;top:8px;border-radius:16px;}
+#gform_5 .ginput_container_select:after{content:'\f063';background:#000;}
+#gform_5 .ginput_container_number.choice-selected:after{background:#009a76;-webkit-transition:.3s ease;-moz-transition:.3s ease;-o-transition:.3s ease;transition:.3s ease;content:'\f00c';}
+#gform_5 li#field_5_82 .ginput_container{margin:0;width:100%;}
+.apparel-title:before,.buttons-title:before,.embroidery-title:before,.posters-title:before,.totes-title:before,.vinyl-title:before{content:'';height:125px;width:125px;margin:0 auto;display:block;}
+.totes-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/tote-bags.png);background-size:cover;}
+.posters-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/poster-prints.png);background-size:cover;}
+.vinyl-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/vinyl-cutting.png);background-size:cover;}
+.buttons-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/buttons.png);background-size:cover;}
+.apparel-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/apparel-printing.png);background-size:cover;}
+.embroidery-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/10/embroidery.png);background-size:cover;}
+#gform_5 span.options_message{display:block;font-size:14px;color:gray;font-weight:100;}
+#gform_5 .ginput_container_list .gfield_list_cell,#gform_5 .ginput_container_list tr{background:0 0;text-align:left;}
+#gform_5 .ginput_container_list .gfield_list_cell input{margin-bottom:0!important;}
+#field_5_174 .ginput_container_list thead tr th:nth-child(3),#field_5_174 .ginput_container_list thead tr th:nth-child(4),#field_5_175 .ginput_container_list thead tr th:nth-child(3),#gform_5 .ginput_container_list thead tr th:nth-child(2){padding-left:16px;}
+#gform_5 li.gchoice_5_82_1{width:200px;}
+#gform_5 li.gchoice_5_82_1 label{width:100%;text-align:center;font-family:GothamProMedium,sans-serif;border:2px solid #009a76;color:#fff!important;line-height:30px;background:#009a76;-webkit-transition:.3s ease;-moz-transition:.3s ease;-o-transition:.3s ease;transition:.3s ease;}
+#gform_5 li.gchoice_5_82_1 label:focus,#gform_5 li.gchoice_5_82_1 label:hover{background:#00674f;color:#fff;}
+#gform_5 li.gchoice_5_82_1 input:checked~label{color:#fff!important;background:#b10000;border-color:#707070;}
+#gform_5 #field_5_40>label{display:none!important;}
+#gform_5 .quote_options{width:30%;float:left;margin-top:0;}
+#gform_5 .quote_options .gfield_checkbox li{width:100%;overflow:visible;}
+li#field_5_40,li#field_5_40 .ginput_container.ginput_container_checkbox,ul#input_5_40{margin-top:0;}
+#gform_5 #gform_page_5_2 .quote_data_field{width:70%!important;float:right;height:80px;margin-bottom:40px!important;-moz-animation:fadein 450ms;-webkit-animation:fadein 450ms;-o-animation:fadein 450ms;animation:fadein 450ms;}
+#gform_5 #gform_page_5_2 li#field_5_83{margin-bottom:0!important;width:70%!important;float:right;}
+label#label_5_118_1{width:100px;height:initial!important;}
+#gform_5 #gform_page_5_2 li#field_5_118 label.gfield_label{display:inline-block!important;height:initial;margin-bottom:0;padding-bottom:0;font-size:.8em;font-weight:300;padding-right:10px;width:90%;float:left;text-align:right;line-height:22px;}
+#gform_5 #gform_page_5_2 .ginput_container_checkbox input~label#label_5_118_1:after,li#field_5_118 label{display:none;}
+#gform_5 .gfield_checkbox input#choice_5_118_1{visibility:visible;position:relative;}
+#field_5_118 .ginput_container.ginput_container_checkbox{width:10%!important;float:left;}
+li#field_5_118{margin-top:0;margin-bottom:0;width:70%;float:right;height:80px;}
+#gform_5 #gform_page_5_2 .quote_data_field input,#gform_5 #gform_page_5_2 .quote_data_field select{font-size:12px;padding-right:40px;}
+li#field_5_84{width:70%!important;float:right;height:80px;margin-bottom:0!important;margin-top:35px;}
+#gform_5 li.gchoice_5_82_1 input{visibility:hidden;}
+#gform_page_5_1 .gfield_label,#gform_page_5_2 .gfield_label{font-size:16px;line-height:36px;text-align:center;margin-bottom:2em;width:100%;color:#000;}
+#gform_5 #gform_page_5_1 .left_label .gfield .ginput_container_radio,#gform_5 #gform_page_5_2 .left_label .gfield .ginput_container_checkbox{width:100%;padding:0;margin-left:0;font-family:GothamProBold,sans-serif;margin-top:0;}
+#gform_next_button_5_2{visibility:hidden!important;}
+#gform_5 .gform_page_footer input.button{font-size:14px;}
+#gform_5 .gform_page_footer input.gform_previous_button{border:2px solid #009a76;color:#009a76;background:#fff;}
+#gform_5 .gform_page_footer input.gform_previous_button:active,#gform_5 .gform_page_footer input.gform_previous_button:focus,#gform_5 .gform_page_footer input.gform_previous_button:hover{font-size:14px;border:2px solid #00674f;color:#fff;background:#00674f;}
+#gform_5 #gform_page_5_1{margin:3em 0 0;}
+#gform_5 #gform_page_5_1 .left_label .gfield label{padding:0 0 10px;margin:5px auto;font-family:GothamProBold,sans-serif!important;color:#000!important;}
+#gform_5 #gform_page_5_1 .gform_page_footer{height:0;margin:0;padding:0;border:0;}
+#gform_5 #gform_page_5_1 .left_label .gfield label img{opacity:1;-webkit-transition:1.5s cubic-bezier(.22,.61,.36,1);-moz-transition:1.5s cubic-bezier(.22,.61,.36,1);-o-transition:1.5s cubic-bezier(.22,.61,.36,1);transition:1.5s cubic-bezier(.22,.61,.36,1);margin-bottom:10px;width:135px;height:auto;object-fit:cover;border-radius:0;}
+#gform_5 #gform_page_5_1 .left_label .gfield input:checked~label img{opacity:.6;-webkit-transform:rotateZ(360deg) scale(.5);-moz-transform:rotateZ(360deg) scale(.5);-ms-transform:rotateZ(360deg) scale(.5);transform:rotateZ(360deg) scale(.5);}
+#gform_5 #gform_page_5_1 .left_label .gfield input:checked~label{box-shadow:0 0 10px #009a76;-webkit-transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);-moz-transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);-o-transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);border-radius:10px;}
+#gform_5 #input_5_1 li{width:100%;overflow:visible;}
+#gform_5 #gform_page_5_2 .left_label .gfield label{padding:0 0 10px;margin:0 auto 5px;font-family:GothamProBold,sans-serif!important;color:#000!important;height:132px;}
+#gform_5 #gform_page_5_2 ul li.gfield{clear:none;}
+li#field_5_85 label.gfield_label{line-height:initial;}
+#gform_5 #gform_page_5_2 .left_label .quote_data_field label{display:none!important;height:auto;}
+#gform_5 #gform_page_5_2 .ginput_container_checkbox input:checked~label:after{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1;}
+#gform_5 #gform_page_5_2 .left_label .gfield label img{-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);}
+#gform_5 #gform_page_5_2 .left_label .gfield input:checked~label img{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}
+#gform_5 #gform_page_5_2 .gfield_checkbox{overflow:visible;}
+li#field_5_143,li#field_5_144{clear:left!important;}
+li#field_5_140,li#field_5_140 .gfield_checkbox{margin-bottom:0;}
+.stencilMessage{font-size:14px;color:#a4000b;margin-bottom:2em;}
+#gform_5 .quote_options .ginput_container{position:relative;left:118%;transition:.4s ease;}
+#gform_5 #gform_page_5_2 li#field_5_84{margin-bottom:15px!important;}
+#gform_5 .gform_fields li#field_5_163 label,#gform_5 .gform_fields li#field_5_164 label,#gform_5 .gform_fields li#field_5_165 label,#gform_5 .gform_fields li#field_5_166 label,#gform_5 .gform_fields li#field_5_167 label{font-size:.9em;line-height:20px;}
+#gform_5 .gform_fields li#field_5_163,#gform_5 .gform_fields li#field_5_164,#gform_5 .gform_fields li#field_5_165,#gform_5 .gform_fields li#field_5_166,#gform_5 .gform_fields li#field_5_167{margin:0 0 15px!important;}
+#gform_5 #gform_page_5_3 .ginput_container input,#gform_5 #gform_page_5_3 .ginput_container input:focus{text-align:center;font-size:20px;font-family:GothamProRegular,sans-serif;text-transform:uppercase;background:0 0!important;box-shadow:0 0 0!important;width:100%;border:0;}
+#gform_5 #gform_page_5_3 .ginput_container_number,#gform_5 #gform_page_5_3 .ginput_container_text{width:100%;margin-left:0;}
+#gform_5 #gform_page_5_3 .ginput_container_number:before,#gform_5 #gform_page_5_3 .ginput_container_text:before{content:'Estimated Quote*:';text-align:center;width:100%;display:block;color:gray;font-weight:800;font-family:GothamProRegular,sans-serif;}
+#gform_5 #gform_page_5_3 .ginput_container_number:after,#gform_5 #gform_page_5_3 .ginput_container_text:after{content:'*Does not include taxes';text-align:center;width:100%;display:block;color:gray;font-size:14px;font-family:GothamProRegular,sans-serif;margin-bottom:35px;}
+#gform_5 #gform_page_5_3 .ginput_container.ginput_container_number input,#gform_5 #gform_page_5_3 .ginput_container.ginput_container_text input{margin:0!important;padding:0;color:#009a76!important;font-size:28px!important;}
+#gform_5 #gform_page_5_3 .ginput_container_checkbox input{right:10px;opacity:1;margin-top:0;top:5px;}
+#gform_5 #gform_page_5_3 .gform_page_footer{display:flex;align-items:center;flex-direction:column-reverse;}
+#gform_5 #gform_page_5_3 .gform_page_footer input{margin:10px 0;max-width:300px;width:100%;}
+input#input_5_123{opacity:0;-webkit-transition:450ms ease;-moz-transition:450ms ease;-o-transition:450ms ease;transition:450ms ease;}
+input#input_5_123.fadeIn{opacity:1;}
+li#field_5_123 .ginput_container_text span{text-align:center;display:block;color:#009a76!important;line-height:14px;padding-bottom:8px;position:relative;bottom:4px;}
+li#field_5_123,li#field_5_82{padding-right:0;}
+#gform_5 #gform_page_5_5 .gfield_description{margin-top:0;padding-top:0;font-style:italic;}
+#gform_5 #gform_page_5_5 .ginput_container_text input{margin-bottom:0!important;}
+#gform_5 #gform_page_5_5 .gfield_checkbox label,#gform_5 #gform_page_5_5 .gfield_radio label{background:#009a76;color:#fff!important;padding:10px;margin:0;}
+#gform_5 #gform_page_5_5 .gfield_checkbox input:checked~label,#gform_5 #gform_page_5_5 .gfield_radio input:checked~label{background:#00674f;}
+#gform_5 li#field_5_174 .gfield_list_group .gfield_list_cell:first-child:after,#gform_5 li#field_5_175 .gfield_list_group .gfield_list_cell:first-child:after{content:'';}
+#gform_5 #gform_page_5_6 .gfield_radio label{background:#009a76;color:#fff!important;padding:10px;}
+#gform_5 #gform_page_5_6 .gfield_radio input:checked~label{background:#00674f;}
+#gform_page_5_6 .gform_page_footer{padding:16px 0;}
+#gform_5 #gform_page_5_6 .gfield_description{margin-top:0;padding-top:0;font-style:italic;}
+input#input_5_16{margin-bottom:0!important;}
+li#field_5_109 .gfield_radio{justify-content:normal;}
+li#field_5_173 .gform_drop_area{width:100%;margin:0;}
+@media (min-width:481px){
+	#gform_5 #gform_page_5_2 li#field_5_118 label.gfield_label{line-height:42px;}
+}
+@media (max-width:599px){
+	#gform_5 .gform_page_footer{display:flex;align-items:center;flex-direction:column-reverse;}
+}
+@media (min-width:600px){
+	#gform_5 #gform_page_5_2 .left_label .gfield .gfield_checkbox label{height:170px;}
+	#gform_5 #gform_page_5_2 .quote_data_field{margin-bottom:83px!important;}
+	#field_5_122 .ginput_container.ginput_container_radio .gfield_radio{padding-top:3em;}
+	#gform_5 .gfield_checkbox li,#gform_5 .gfield_radio li{width:48%;}
+}
+@media (min-width:641px){
+	#gform_5 .quote_options .ginput_container{left:138%;}
+	#gform_5 #gform_preview_5_173{width:70%;margin-left:29%;}
+}
+@media (min-width:768px){
+	#gform_5 #gform_page_5_2 .gform_page_footer,#gform_5 #gform_page_5_4 .gform_page_footer,#gform_5 #gform_page_5_5 .gform_page_footer,#gform_5 #gform_page_5_6 .gform_page_footer{display:flex;justify-content:space-between;}
+	#gform_5 #input_5_1 li{width:33%;}
+}
+@media (min-width:1031px){
+	#gform_5 .gfield_list_group .gfield_list_cell:first-child:after{content:'x';position:absolute;bottom:0;right:-12px;}
+	#gform_5 .gfield_list_group .gfield_list_cell:first-child{position:relative;}
+	#gform_5 #gform_page_5_2 .ginput_container_checkbox input~label:after{display:block;position:absolute;font-family:FontAwesome;content:'\f00c';color:#009975;right:0;top:-10px;font-size:14px;-webkit-transform-origin:50%;-moz-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-transform:scale(.7);-moz-transform:scale(.7);-ms-transform:scale(.7);transform:scale(.7);transition-duration:.4s;transition-delay:0s;opacity:0;border:1px solid #009975;border-radius:15px;width:24px;line-height:22px;height:24px;text-align:center;}
+	#gform_5 .ginput_container_number,#gform_5 .ginput_container_select{margin-top:0;width:70%;margin-left:30%;}
+	#gform_5 #gform_page_5_2 .quote_data_field{margin-top:45px;height:50px;}
+	#gform_5 #gform_page_5_2 .left_label .quote_data_field label{width:25%;text-align:right;display:block!important;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/uploads/pum/pum-site-styles.css?generated=1587763357&ver=1.10.1 ; media=all */
+@media all{
+	.pum-container .pum-content>:last-child{margin-bottom:0;}
+	.pum-content{background:0 0;border:none;bottom:auto;clear:none;cursor:default;float:none;font-family:inherit;font-size:medium;font-style:normal;font-weight:400;height:auto;left:auto;letter-spacing:normal;line-height:normal;max-height:none;max-width:none;min-height:0;min-width:0;overflow:visible;position:static;right:auto;text-align:left;text-decoration:none;text-indent:0;text-transform:none;top:auto;visibility:visible;white-space:normal;width:auto;z-index:auto;}
+	.pum-content{position:relative;z-index:1;}
+	.pum-overlay *,.pum-overlay :after,.pum-overlay :before{box-sizing:border-box;}
+	.pum-container.pum-responsive img{max-width:100%;height:auto;}
+	.pum-theme-1553 .pum-content,.pum-theme-lightbox .pum-content{color:#000000;font-family:inherit;}
+}
+/*! CSS Used keyframes */
+@keyframes fadein{from{opacity:0;-ms-transform:scale(.2);transform:scale(.2);}to{opacity:1;-ms-transform:scale(1);transform:scale(1);}}
+@-moz-keyframes fadein{from{opacity:0;-moz-transform:scale(.2);}to{opacity:1;-moz-transform:scale(1);}}
+@-webkit-keyframes fadein{from{opacity:0;-webkit-transform:scale(.2);}to{opacity:1;-webkit-transform:scale(1);}}
+@-o-keyframes fadein{from{opacity:0;-o-transform:scale(.2);}to{opacity:1;-o-transform:scale(1);}}
+/*! CSS Used fontfaces */
+@font-face{font-family:"GothamProRegular";src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.eot");src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.eot#iefix") format("embedded-opentype"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");font-style:normal;font-weight:normal;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1UAw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0ddc1UAw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Vdc1UAw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0adc1UAw.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Wdc1UAw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Xdc1UAw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Zdc0.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:"GothamProMedium";src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.eot");src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.eot#iefix") format("embedded-opentype"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.woff") format("woff"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");font-style:normal;font-weight:normal;}
+@font-face{font-family:'FontAwesome';src:url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.eot?v=4.7.0');src:url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.eot#iefix&v=4.7.0') format('embedded-opentype'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:"GothamProBold";src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.eot");src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.eot#iefix") format("embedded-opentype"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.woff") format("woff"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.ttf") format("truetype");font-style:normal;font-weight:normal;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! CSS Used from: https://www.printrenegades.com/wp-content/themes/printrenegadesdev/css/foundation.min.css?ver=6.3.0 ; media=all */
+@media all{
+	img{border-style:none;}
+	input,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0;}
+	select{text-transform:none;}
+	[type=submit],html [type=button]{-webkit-appearance:button;}
+	[type=button]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0;}
+	[type=button]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText;}
+	input{overflow:visible;}
+	[type=checkbox],[type=radio]{box-sizing:border-box;padding:0;}
+	textarea{overflow:auto;}
+	*,:after,:before{box-sizing:inherit;}
+	img{display:inline-block;vertical-align:middle;max-width:100%;height:auto;-ms-interpolation-mode:bicubic;}
+	textarea{height:auto;min-height:50px;border-radius:0;}
+	select{width:100%;border-radius:0;}
+	div,form,h2,li,td,th,ul{margin:0;padding:0;}
+	h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility;}
+	h2{line-height:1.4;margin-top:0;margin-bottom:.5rem;}
+	h2{font-size:1.25rem;}
+	@media print,screen and (min-width:641px){
+		h2{font-size:2.5rem;}
+	}
+	ul{margin-bottom:1rem;list-style-position:outside;line-height:1.6;}
+	li{font-size:inherit;}
+	ul{list-style-type:disc;}
+	ul{margin-left:1.25rem;}
+	ul ul{margin-left:1.25rem;margin-bottom:0;}
+	@media print{
+		*{background:transparent!important;box-shadow:none!important;color:#000!important;text-shadow:none!important;}
+		thead{display:table-header-group;}
+		img,tr{page-break-inside:avoid;}
+		img{max-width:100%!important;}
+		h2{orphans:3;widows:3;}
+		h2{page-break-after:avoid;}
+	}
+	[type=text],textarea{display:block;box-sizing:border-box;width:100%;height:2.4375rem;margin:0 0 1rem;padding:.5rem;border:1px solid #cacaca;border-radius:0;background-color:#fefefe;box-shadow:inset 0 1px 2px hsla(0,0%,4%,.1);font-family:inherit;font-size:1rem;font-weight:400;color:#0a0a0a;transition:box-shadow .5s,border-color .25s ease-in-out;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+	[type=text]:focus,textarea:focus{outline:none;border:1px solid #8a8a8a;background-color:#fefefe;box-shadow:0 0 5px #cacaca;transition:box-shadow .5s,border-color .25s ease-in-out;}
+	textarea{max-width:100%;}
+	textarea[rows]{height:auto;}
+	input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#cacaca;}
+	input::-moz-placeholder,textarea::-moz-placeholder{color:#cacaca;}
+	input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#cacaca;}
+	input::placeholder,textarea::placeholder{color:#cacaca;}
+	input:disabled,input[readonly],textarea:disabled{background-color:#e6e6e6;cursor:not-allowed;}
+	[type=button],[type=submit]{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;}
+	[type=checkbox],[type=file],[type=radio]{margin:0 0 1rem;}
+	[type=checkbox]+label,[type=radio]+label{display:inline-block;vertical-align:baseline;margin-left:.5rem;margin-right:1rem;margin-bottom:0;}
+	[type=checkbox]+label[for],[type=radio]+label[for]{cursor:pointer;}
+	[type=file]{width:100%;}
+	label{display:block;margin:0;font-size:.875rem;font-weight:400;line-height:1.8;color:#0a0a0a;}
+	select{height:2.4375rem;margin:0 0 1rem;padding:.5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:1px solid #cacaca;border-radius:0;background-color:#fefefe;font-family:inherit;font-size:1rem;line-height:normal;color:#0a0a0a;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");background-origin:content-box;background-position:right -1rem center;background-repeat:no-repeat;background-size:9px 6px;padding-right:1.5rem;transition:box-shadow .5s,border-color .25s ease-in-out;}
+	@media screen and (min-width:0\0){
+		select{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==");}
+	}
+	select:focus{outline:none;border:1px solid #8a8a8a;background-color:#fefefe;box-shadow:0 0 5px #cacaca;transition:box-shadow .5s,border-color .25s ease-in-out;}
+	select:disabled{background-color:#e6e6e6;cursor:not-allowed;}
+	select::-ms-expand{display:none;}
+	.button{display:inline-block;vertical-align:middle;margin:0 0 1rem;padding:.85em 1em;-webkit-appearance:none;border:1px solid transparent;border-radius:0;transition:background-color .25s ease-out,color .25s ease-out;font-size:.9rem;line-height:1;text-align:center;cursor:pointer;background-color:#2ba6cb;color:#fefefe;}
+	.button:focus,.button:hover{background-color:#258dad;color:#fefefe;}
+	table{width:100%;margin-bottom:1rem;border-radius:0;background-color:#fff;border-collapse:collapse;}
+	table tbody,table thead,table th,table td{border:1px solid #f1f1f1;background-color:transparent;}
+	table thead tr{background-color:#f8f8f8;}
+	table thead th{padding:.5rem .625rem .625rem;font-weight:700;text-align:left;}
+	table tbody td{padding:.5rem .625rem .625rem;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/themes/printrenegadesdev/css/custom.css ; media=all */
+@media all{
+	.gform_wrapper ul{list-style:none;}
+	.gform_fields{margin:0;}
+	.gfield{list-style:none;margin-bottom:20px;}
+	.gfield_label{display:none;}
+	.ginput_container ul{margin-left:0;}
+	.gfield_description{margin-top:10px;}
+	.validation_message{margin-bottom:10px;color:#990000;display:none;}
+	input:-moz-placeholder,textarea:-moz-placeholder{color:#555;}
+	input::-moz-placeholder,textarea::-moz-placeholder{color:#555;}
+	input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#555;}
+	input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#555;}
+	[type=text],textarea{margin-bottom:0;font-family:"GothamProRegular", sans-serif;font-size:14px;color:#333;}
+	textarea[rows]{height:150px;max-width:100%;}
+	select::-ms-expand{display:none;}
+	select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/images/select_arrow.png");background-repeat:no-repeat;background-position:100% 70%;background-size:15px;cursor:pointer;}
+	[type=checkbox],[type=file],[type=radio]{margin-bottom:0;}
+	.button,input[type='submit']{border:none;padding:10px 20px;margin-bottom:0;background-color:#009a76;color:#fff;font-family:"Open Sans", sans-serif;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;}
+	.button:hover,.button:focus,input[type='submit']:hover,input[type='submit']:focus{background-color:#00674f;}
+	h2{font-family:"GothamProMedium", sans-serif;}
+	h2{font-family:"GothamProMedium", sans-serif;color:inherit;}
+	h2{font-size:40px;}
+	.button{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+	table tbody,table thead,table th,table td{border:none;}
+	table{width:100%!important;border:1px solid #f1f1f1;}
+	table tbody td{text-align:center;padding:12px 5px;}
+	table tbody tr:first-child td{background:#f5f5f5;}
+	table tbody tr td:first-child{text-align:left;}
+	@media (max-width: 767px){
+		table tbody tr:first-child td{background:transparent;}
+		table tbody tr td:first-child{background:#f5f5f5;}
+		table tbody tr td:not(:last-child){border-right:1px solid #f1f1f1;}
+	}
+	@media (max-width: 480px){
+		table tbody td{font-size:14px;}
+	}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/themes/printrenegadesdev/style.css ; media=all */
+@media all{
+	[type='text'],select,textarea,textarea:focus{margin-bottom:20px!important;background:#F0F0F0!important;color:#6B6464!important;font-size:18px;font-family:"GothamProMedium", sans-serif;border:none;border-radius:10px;}
+	.gfield_label{display:none!important;}
+	input::-moz-placeholder,textarea::-moz-placeholder,input::-webkit-placeholder,textarea::-webkit-placeholder,input::-ms-placeholder,textarea::-ms-placeholder{color:#6B6464;}
+	input::placeholder,textarea::placeholder{color:#6B6464;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.4.17 ; media=all */
+@media all{
+	.gform_wrapper select,.gform_wrapper textarea{font-size:inherit;font-family:inherit;letter-spacing:normal;}
+	.gform_wrapper{margin-bottom:16px;margin-top:16px;max-width:100%;}
+	.gform_wrapper form{text-align:left;max-width:100%;margin:0 auto;}
+	.gform_wrapper *,.gform_wrapper :after,.gform_wrapper :before{box-sizing:border-box!important;}
+	.gform_wrapper h2{font-weight:400;border:none;background:0 0;}
+	.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){font-size:inherit;font-family:inherit;padding:5px 4px;letter-spacing:normal; 
+    border-radius: 10px;
+    border: none;}
+	.gform_wrapper textarea{padding:6px 8px;line-height:1.5;resize:none;}
+	.gform_wrapper select{line-height:1.5;}
+	.gform_wrapper ul.gform_fields{margin:0!important;list-style-type:none;display:block;}
+	.gform_wrapper ul{text-indent:0;}
+	.gform_wrapper form li,.gform_wrapper li{margin-left:0!important;list-style:none!important;overflow:visible;}
+	.gform_wrapper ul li.gfield{clear:both;}
+	.gform_wrapper ul.gfield_checkbox li,.gform_wrapper ul.gfield_radio li{overflow:hidden;}
+	.gform_wrapper form ul.gform_fields.left_label li.gfield,.gform_wrapper ul.gform_fields.left_label li.gfield{margin-bottom:14px;}
+	.gform_wrapper form ul.left_label li ul.gfield_checkbox li,.gform_wrapper form ul.left_label li ul.gfield_radio li,.gform_wrapper ul.left_label li ul.gfield_checkbox li,.gform_wrapper ul.left_label li ul.gfield_radio li{margin-bottom:10px;}
+	.gform_wrapper ul li:after,.gform_wrapper ul li:before,.gform_wrapper ul.gform_fields{padding:0;margin:0;overflow:visible;}
+	.gform_wrapper select option{padding:2px;display:block;}
+	.gform_wrapper .ginput_complex.ginput_container{overflow:visible;width:100%;}
+	.gform_wrapper label.gfield_label{font-weight:700;font-size:inherit;}
+	.gform_wrapper .ginput_complex .ginput_left input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),.gform_wrapper .ginput_complex .ginput_right input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),.gform_wrapper .ginput_complex .ginput_right select,.gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),.gform_wrapper .ginput_complex select{width:100%;}
+	.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label{display:block;font-size:.813em;letter-spacing:.5pt;white-space:nowrap;}
+	.gform_wrapper ul.gfield_checkbox li label,.gform_wrapper ul.gfield_radio li label{display:-moz-inline-stack;display:inline-block;letter-spacing:inherit;vertical-align:middle;cursor:pointer;}
+	.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label{margin:1px 0 9px 1px;}
+	body .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,body .gform_wrapper ul li.field_description_below div.ginput_container_radio{margin-top:16px;margin-bottom:0;}
+	.gform_wrapper .hidden_label .gfield_label{clip:rect(1px,1px,1px,1px);position:absolute!important;height:1px;width:1px;overflow:hidden;}
+	.gform_wrapper li.hidden_label input{margin-top:12px;}
+	.gform_wrapper .screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important;}
+	.gform_wrapper input.large,.gform_wrapper input.medium,.gform_wrapper select.large{width:100%;}
+	.gform_wrapper textarea.small{height:80px;width:100%;}
+	.gform_wrapper h2.gsection_title{margin:0!important;padding:0!important;letter-spacing:normal!important;}
+	.gform_wrapper h2.gsection_title{font-weight:700;font-size:1.25em;}
+	.gform_wrapper li.gfield.field_description_below+li.gsection{margin-top:24px!important;}
+	.gform_wrapper .gsection{border-bottom:1px solid #CCC;padding:0 16px 8px 0;margin:28px 0;clear:both;}
+	.gform_wrapper ul.gfield_checkbox li input[type=checkbox],.gform_wrapper ul.gfield_radio li input[type=radio]{width:auto!important;}
+	.gform_wrapper ul.gfield_checkbox,.gform_wrapper ul.gfield_radio{margin:6px 0;padding:0;}
+	.gform_wrapper .gfield_checkbox li label,.gform_wrapper .gfield_radio li label{display:-moz-inline-stack;display:inline-block;padding:0;width:auto;line-height:1.5;font-size:.875em;vertical-align:middle;max-width:85%;white-space:normal;}
+	.gform_wrapper .gfield_checkbox li label{margin:0;}
+	.gform_wrapper .gfield_radio li label{margin:2px 0 0 4px;}
+	.gform_wrapper .gfield_checkbox li input,.gform_wrapper .gfield_checkbox li input[type=checkbox],.gform_wrapper .gfield_radio li input[type=radio]{display:-moz-inline-stack;display:inline-block;vertical-align:middle;margin-left:1px;}
+	.gform_wrapper .gfield_description{font-size:.813em;line-height:inherit;clear:both;font-family:inherit;letter-spacing:normal;}
+	.gform_wrapper .gfield_description{padding:0 16px 0 0;}
+	.gform_wrapper .field_description_below .gfield_description{padding-top:16px;}
+	.gform_wrapper .gfield_description{width:100%;}
+	.gform_wrapper .gfield_required{color:#790000;margin-left:4px;}
+	.gform_wrapper .validation_message{color:#790000;font-weight:700;letter-spacing:normal;}
+	.gform_wrapper .gform_page_footer input.button,.gform_wrapper .gform_page_footer input[type=submit]{font-size:1em;width:100%;margin:0 0 16px;}
+	.gform_wrapper .ginput_complex .ginput_full,.gform_wrapper .ginput_complex .ginput_left,.gform_wrapper .ginput_complex .ginput_right{min-height:45px;}
+	.gform_wrapper .ginput_complex .ginput_full input[type=text]{width:100%;}
+	.gform_wrapper .gfield_checkbox li,.gform_wrapper .gfield_radio li{position:relative;margin:0 0 16px;line-height:1.2;}
+	.gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked+label,.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label{font-weight:700;}
+	.gform_wrapper .gform_hidden,.gform_wrapper input.gform_hidden,.gform_wrapper input[type=hidden]{display:none!important;max-height:1px!important;overflow:hidden;}
+	.gform_wrapper ul.gfield_checkbox li,.gform_wrapper ul.gfield_radio li{padding:0!important;}
+	.gform_wrapper li.gfield_html{max-width:100%;}
+	.gform_wrapper .gfield_html.gfield_no_follows_desc{margin-top:10px;}
+	.gform_validation_container,.gform_wrapper .gform_validation_container,body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,body .gform_wrapper li.gform_validation_container,body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container{display:none!important;position:absolute!important;left:-9000px;}
+	.gform_wrapper .gform_page_footer{margin:14px 0;width:100%;border-top:1px dotted #CCC;padding:16px 0 0;clear:both;}
+	.gform_wrapper .gform_page_footer.left_label{padding:16px 0 0 29%;}
+	.gform_wrapper .gform_page_footer .button.gform_next_button,.gform_wrapper .gform_page_footer .button.gform_previous_button{display:-moz-inline-stack;display:inline-block;}
+	.gform_wrapper .gform_page_footer .button.gform_previous_button{margin-bottom:8px;}
+	.gform_wrapper table.gfield_list,.gform_wrapper table.gfield_list tbody,.gform_wrapper table.gfield_list td,.gform_wrapper table.gfield_list th,.gform_wrapper table.gfield_list thead,.gform_wrapper table.gfield_list tr{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;}
+	.gform_wrapper table.gfield_list{border-spacing:0;border-collapse:collapse;table-layout:auto!important;}
+	.gform_wrapper table.gfield_list thead th{font-weight:700;text-align:left;}
+	.gform_wrapper table.gfield_list colgroup{width:100%;display:block;}
+	.gform_wrapper table.gfield_list thead,.gform_wrapper table.gfield_list tr{padding:0;margin:0;}
+	.gform_wrapper table.gfield_list td,.gform_wrapper table.gfield_list th{padding:4px 0;}
+	.gform_wrapper ul.gform_fields:not(.top_label) table.gfield_list th{padding:0 0 4px;}
+	.gform_wrapper table.gfield_list td+td,.gform_wrapper table.gfield_list th+th{padding:0 0 0 16px;}
+	.gform_wrapper .gfield_list,.gform_wrapper .gfield_list td.gfield_list_cell input{width:100%;}
+	.gform_wrapper .gform_fileupload_multifile .gform_drop_area{padding:24px;border:1px dashed #CCC;text-align:center;color:#AAA;margin-bottom:16px;background:rgba(0,0,0,.02);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+	.gform_wrapper span.gform_drop_instructions{display:block;margin-bottom:8px;}
+	body .gform_wrapper ul li.gfield{margin-top:16px;padding-top:0;}
+	body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html{line-height:inherit;}
+	@media only screen and (max-width:641px){
+		.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]){line-height:2;min-height:2rem;}
+		.gform_wrapper textarea{line-height:1.5;}
+		.gform_wrapper .ginput_container span:not(.ginput_price){margin-bottom:8px;display:block;}
+		.gform_wrapper li.field_sublabel_below .ginput_complex{margin-top:12px!important;}
+		.gform_wrapper ul.gfield_checkbox li label,.gform_wrapper ul.gfield_radio li label{width:85%;cursor:pointer;}
+	}
+	@media only screen and (max-width:761px),(min-device-width:768px) and (max-device-width:1023px){
+		.gform_wrapper table.gfield_list{border:0;}
+		.gform_wrapper table.gfield_list thead{position:absolute;top:-9999px;left:-9999px;}
+		.gform_wrapper table.gfield_list tr{margin-bottom:10px;display:block;background:#fff;position:relative;border:1px solid #CCC;border-top:2px solid #CCC;border-bottom:4px solid #CCC;}
+		.gform_wrapper table.gfield_list td{display:block;margin-left:8px;margin-right:8px;}
+		.gform_wrapper ul.gform_fields.form_sublabel_below table.gfield_list td:after{content:attr(data-label);font-size:.875em;letter-spacing:.5pt;white-space:nowrap;display:block;clear:both;}
+		.gform_wrapper ul.gform_fields.form_sublabel_below table.gfield_list td:after{margin:3px 0 8px 8px;}
+		.gform_wrapper table.gfield_list td+td,.gform_wrapper table.gfield_list th+th{padding:4px 0 0;}
+		.gform_wrapper table.gfield_list tr.gfield_list_row_odd{margin:16px 0;}
+		.gform_wrapper table.gfield_list tr,.gform_wrapper table.gfield_list tr.gfield_list_row_odd:first-child{padding-top:12px;}
+		.gform_wrapper .gfield_list td.gfield_list_cell input{width:calc(100% - 16px);margin-left:8px;margin-right:8px;}
+	}
+	@media only screen and (min-width:641px){
+		.gform_wrapper .gform_body{width:100%;}
+		.gform_wrapper .gfield_checkbox li,.gform_wrapper .gfield_radio li{margin:0 0 8px;line-height:1.3;}
+		.gform_wrapper .gsection{margin:28px 16px 28px 0;}
+		.gform_wrapper ul.gform_fields:not(.top_label) .gfield_label{float:left;width:29%;padding-right:16px;margin-bottom:16px;}
+		.gform_wrapper .left_label .gfield_description{width:70%;}
+		.gform_wrapper form ul.left_label li ul.gfield_checkbox li,.gform_wrapper form ul.left_label li ul.gfield_radio li,.gform_wrapper ul.left_label li ul.gfield_checkbox li,.gform_wrapper ul.left_label li ul.gfield_radio li{margin-bottom:10px;}
+		.gform_wrapper .left_label .gfield_description{margin-left:29%;}
+		.gform_wrapper form ul.gform_fields:not(.top_label) li.gfield_html_formatted{margin-left:29%!important;width:70%;}
+		.gform_wrapper ul.gform_fields:not(.top_label) ul.gfield_checkbox,.gform_wrapper ul.gform_fields:not(.top_label) ul.gfield_radio{overflow:hidden;}
+		.gform_wrapper .left_label div.ginput_complex{width:70%;margin-left:29%;}
+		.gform_wrapper .left_label input.medium{width:calc(35% - 8px);}
+		.gform_wrapper .left_label input.large,.gform_wrapper .left_label select.large,.gform_wrapper .left_label textarea.small{width:70%;}
+		.gform_wrapper ul.gform_fields:not(.top_label) .ginput_list{width:70%;margin-left:29%!important;}
+		.gform_wrapper .left_label li.hidden_label input{margin-left:3.7%;}
+		.gform_wrapper .hidden_label input.large{width:100%;}
+		.gform_wrapper textarea.small{height:80px;width:100%;}
+		.gform_wrapper .ginput_complex .ginput_left,.gform_wrapper .ginput_complex .ginput_right{width:50%;display:-moz-inline-stack;display:inline-block;vertical-align:top;margin:0 -4px 0 0;}
+		.gform_wrapper .gform_page_footer input.button,.gform_wrapper .gform_page_footer input[type=submit]{font-size:1em;width:auto;margin:0 16px 0 0;}
+		.gform_wrapper ul.gform_fields li.gfield{padding-right:16px;}
+		.gform_wrapper .ginput_complex .ginput_left{padding-right:8px;}
+		.gform_wrapper .left_label .ginput_complex.ginput_container_address:after{content:"";display:block;}
+		.gform_wrapper .ginput_complex.ginput_container_address .ginput_left{margin-right:8px;}
+		.gform_wrapper .ginput_complex.ginput_container_address .ginput_right{margin-right:-8px;padding-right:8px;}
+		.gform_wrapper .ginput_complex.ginput_container_address span.ginput_right+span.ginput_left{padding-right:8px!important;margin-right:-8px;}
+		.gform_wrapper .ginput_complex.ginput_container_address span.ginput_right+span.ginput_left.address_zip{margin-right:8px;}
+		html:not([dir=rtl]) .gform_wrapper ul.gform_fields:not(.top_label) .gfield_description,html:not([dir=rtl]) .gform_wrapper ul.gform_fields:not(.top_label) .ginput_container:not(.ginput_container_time):not(.ginput_container_date){width:70%;margin-left:29%;}
+		.gform_wrapper ul.gform_fields:not(.top_label) .gform_fileupload_multifile .gform_drop_area{margin-left:29%;width:70%;}
+		.gform_wrapper .gform_page_footer .button.gform_previous_button{margin-bottom:0;}
+		.gform_wrapper .gform_page_footer .button.gform_button,.gform_wrapper .gform_page_footer .button.gform_next_button{margin-right:10px;}
+	}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.4.17 ; media=all */
+@media all{
+	@media only screen and (min-width:641px){
+		.gform_wrapper ul.gform_fields:not(.top_label) li ul.gfield_checkbox,.gform_wrapper ul.gform_fields:not(.top_label) li ul.gfield_radio{width:calc(70% + 16px);}
+	}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.4.17 ; media=all */
+@media all{
+	.gform_wrapper.gf_browser_chrome ul li:after,.gform_wrapper.gf_browser_chrome ul li:before{content:none;}
+	.gform_wrapper.gf_browser_chrome select{padding:2px 0 2px 3px;}
+	.gform_wrapper.gf_browser_chrome .ginput_complex .ginput_right select,.gform_wrapper.gf_browser_chrome .ginput_complex select{text-indent:2px;line-height:1.5em;margin-bottom:5px;margin-top:2px;}
+	.gform_wrapper.gf_browser_chrome .gfield_checkbox li input,.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio]{margin-top:6px;}
+	.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio],.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select{margin-left:1px;}
+	.gform_wrapper.gf_browser_chrome input.button.gform_button_select_files{padding:6px 12px!important;}
+	.gform_wrapper.gf_browser_chrome span.address_country{margin-top:-2px;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/plugins/gravityforms-addon-quickquotetool/css/quick-quote-form.min.css?ver=1.0.0 */
+#gform_5{color:#000!important;}
+#gform_5 .gform_fields label{max-width:100%;padding-right:0;color:#000!important;}
+#gform_wrapper_5.gform_wrapper .left_label input.large,#gform_wrapper_5.gform_wrapper .left_label select.large{width:100%;}
+#gform_5 .gfield_checkbox,#gform_5 .gfield_radio{display:flex;flex-wrap:wrap;justify-content:space-around;width:100%!important;text-align:center;}
+#gform_5 .gfield_checkbox li,#gform_5 .gfield_radio li{width:100%;}
+#gform_5 .gfield_checkbox input,#gform_5 .gfield_radio input{visibility:hidden;position:absolute;}
+#gform_5 .gfield_html{margin:0!important;text-align:center;width:100%;padding:0;}
+#gform_5 .gfield_html h2{font-size:28px;text-align:center;margin-bottom:1em;width:100%;color:#000;}
+#gform_5 .gfield_required{display:none;}
+#gform_5 .ginput_container.ginput_container_radio li{text-align:center;}
+#gform_5 .left_label .quote_data_field label{display:block!important;}
+#gform_5 .left_label .gfield label img{opacity:.75;transition:450ms all;border-radius:25px;width:100px;height:auto;object-fit:cover;}
+#gform_5 .left_label .gfield input:checked~label img{opacity:1;}
+#gform_5 .ginput_container_number,#gform_5 .ginput_container_select{position:relative;width:95%;margin-left:5%;margin-top:7%;}
+#gform_5 .ginput_container_number.choice-selected:after,#gform_5 .ginput_container_select:after{font-family:FontAwesome;display:inline-block;color:#fff;width:25px;text-align:center;position:absolute;right:10px;top:8px;border-radius:16px;}
+#gform_5 .ginput_container_select:after{content:'\f063';background:#000;}
+#gform_5 .ginput_container_number.choice-selected:after{background:#009a76;-webkit-transition:.3s ease;-moz-transition:.3s ease;-o-transition:.3s ease;transition:.3s ease;content:'\f00c';}
+#gform_5 li#field_5_82 .ginput_container{margin:0;width:100%;}
+.apparel-title:before,.buttons-title:before,.embroidery-title:before,.posters-title:before,.totes-title:before,.vinyl-title:before{content:'';height:125px;width:125px;margin:0 auto;display:block;}
+.totes-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/tote-bags.png);background-size:cover;}
+.posters-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/poster-prints.png);background-size:cover;}
+.vinyl-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/vinyl-cutting.png);background-size:cover;}
+.buttons-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/buttons.png);background-size:cover;}
+.apparel-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/07/apparel-printing.png);background-size:cover;}
+.embroidery-title:before{background:url(http://www.printrenegades.com/wp-content/uploads/2018/10/embroidery.png);background-size:cover;}
+#gform_5 span.options_message{display:block;font-size:14px;color:gray;font-weight:100;}
+#gform_5 .ginput_container_list .gfield_list_cell,#gform_5 .ginput_container_list tr{background:0 0;text-align:left;}
+#gform_5 .ginput_container_list .gfield_list_cell input{margin-bottom:0!important;}
+#field_5_174 .ginput_container_list thead tr th:nth-child(3),#field_5_174 .ginput_container_list thead tr th:nth-child(4),#field_5_175 .ginput_container_list thead tr th:nth-child(3),#gform_5 .ginput_container_list thead tr th:nth-child(2){padding-left:16px;}
+#gform_5 li.gchoice_5_82_1{width:200px;}
+#gform_5 li.gchoice_5_82_1 label{width:100%;text-align:center;font-family:GothamProMedium,sans-serif;border:2px solid #009a76;color:#fff!important;line-height:30px;background:#009a76;-webkit-transition:.3s ease;-moz-transition:.3s ease;-o-transition:.3s ease;transition:.3s ease;}
+#gform_5 li.gchoice_5_82_1 label:focus,#gform_5 li.gchoice_5_82_1 label:hover{background:#00674f;color:#fff;}
+#gform_5 li.gchoice_5_82_1 input:checked~label{color:#fff!important;background:#b10000;border-color:#707070;}
+#gform_5 #field_5_40>label{display:none!important;}
+#gform_5 .quote_options{width:30%;float:left;margin-top:0;}
+#gform_5 .quote_options .gfield_checkbox li{width:100%;overflow:visible;}
+li#field_5_40,li#field_5_40 .ginput_container.ginput_container_checkbox,ul#input_5_40{margin-top:0;}
+#gform_5 #gform_page_5_2 .quote_data_field{width:70%!important;float:right;height:80px;margin-bottom:40px!important;-moz-animation:fadein 450ms;-webkit-animation:fadein 450ms;-o-animation:fadein 450ms;animation:fadein 450ms;}
+#gform_5 #gform_page_5_2 li#field_5_83{margin-bottom:0!important;width:70%!important;float:right;}
+label#label_5_118_1{width:100px;height:initial!important;}
+#gform_5 #gform_page_5_2 li#field_5_118 label.gfield_label{display:inline-block!important;height:initial;margin-bottom:0;padding-bottom:0;font-size:.8em;font-weight:300;padding-right:10px;width:90%;float:left;text-align:right;line-height:22px;}
+#gform_5 #gform_page_5_2 .ginput_container_checkbox input~label#label_5_118_1:after,li#field_5_118 label{display:none;}
+#gform_5 .gfield_checkbox input#choice_5_118_1{visibility:visible;position:relative;}
+#field_5_118 .ginput_container.ginput_container_checkbox{width:10%!important;float:left;}
+li#field_5_118{margin-top:0;margin-bottom:0;width:70%;float:right;height:80px;}
+#gform_5 #gform_page_5_2 .quote_data_field input,#gform_5 #gform_page_5_2 .quote_data_field select{font-size:12px;padding-right:40px;}
+li#field_5_84{width:70%!important;float:right;height:80px;margin-bottom:0!important;margin-top:35px;}
+#gform_5 li.gchoice_5_82_1 input{visibility:hidden;}
+#gform_page_5_1 .gfield_label,#gform_page_5_2 .gfield_label{font-size:16px;line-height:36px;text-align:center;margin-bottom:2em;width:100%;color:#000;}
+#gform_5 #gform_page_5_1 .left_label .gfield .ginput_container_radio,#gform_5 #gform_page_5_2 .left_label .gfield .ginput_container_checkbox{width:100%;padding:0;margin-left:0;font-family:GothamProBold,sans-serif;margin-top:0;}
+#gform_next_button_5_2{visibility:hidden!important;}
+#gform_5 .gform_page_footer input.button{font-size:14px;}
+#gform_5 .gform_page_footer input.gform_previous_button{border:2px solid #009a76;color:#009a76;background:#fff;}
+#gform_5 .gform_page_footer input.gform_previous_button:active,#gform_5 .gform_page_footer input.gform_previous_button:focus,#gform_5 .gform_page_footer input.gform_previous_button:hover{font-size:14px;border:2px solid #00674f;color:#fff;background:#00674f;}
+#gform_5 #gform_page_5_1{margin:3em 0 0;}
+#gform_5 #gform_page_5_1 .left_label .gfield label{padding:0 0 10px;margin:5px auto;font-family:GothamProBold,sans-serif!important;color:#000!important;}
+#gform_5 #gform_page_5_1 .gform_page_footer{height:0;margin:0;padding:0;border:0;}
+#gform_5 #gform_page_5_1 .left_label .gfield label img{opacity:1;-webkit-transition:1.5s cubic-bezier(.22,.61,.36,1);-moz-transition:1.5s cubic-bezier(.22,.61,.36,1);-o-transition:1.5s cubic-bezier(.22,.61,.36,1);transition:1.5s cubic-bezier(.22,.61,.36,1);margin-bottom:10px;width:135px;height:auto;object-fit:cover;border-radius:0;}
+#gform_5 #gform_page_5_1 .left_label .gfield input:checked~label img{opacity:.6;-webkit-transform:rotateZ(360deg) scale(.5);-moz-transform:rotateZ(360deg) scale(.5);-ms-transform:rotateZ(360deg) scale(.5);transform:rotateZ(360deg) scale(.5);}
+#gform_5 #gform_page_5_1 .left_label .gfield input:checked~label{box-shadow:0 0 10px #009a76;-webkit-transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);-moz-transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);-o-transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);transition:box-shadow 2.5s cubic-bezier(.4,0,1,1);border-radius:10px;}
+#gform_5 #input_5_1 li{width:100%;overflow:visible;}
+#gform_5 #gform_page_5_2 .left_label .gfield label{padding:0 0 10px;margin:0 auto 5px;font-family:GothamProBold,sans-serif!important;color:#000!important;height:132px;}
+#gform_5 #gform_page_5_2 ul li.gfield{clear:none;}
+li#field_5_85 label.gfield_label{line-height:initial;}
+#gform_5 #gform_page_5_2 .left_label .quote_data_field label{display:none!important;height:auto;}
+#gform_5 #gform_page_5_2 .ginput_container_checkbox input:checked~label:after{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1;}
+#gform_5 #gform_page_5_2 .left_label .gfield label img{-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);}
+#gform_5 #gform_page_5_2 .left_label .gfield input:checked~label img{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}
+#gform_5 #gform_page_5_2 .gfield_checkbox{overflow:visible;}
+li#field_5_143,li#field_5_144{clear:left!important;}
+li#field_5_140,li#field_5_140 .gfield_checkbox{margin-bottom:0;}
+.stencilMessage{font-size:14px;color:#a4000b;margin-bottom:2em;}
+#gform_5 .quote_options .ginput_container{position:relative;left:118%;transition:.4s ease;}
+#gform_5 #gform_page_5_2 li#field_5_84{margin-bottom:15px!important;}
+#gform_5 .gform_fields li#field_5_163 label,#gform_5 .gform_fields li#field_5_164 label,#gform_5 .gform_fields li#field_5_165 label,#gform_5 .gform_fields li#field_5_166 label,#gform_5 .gform_fields li#field_5_167 label{font-size:.9em;line-height:20px;}
+#gform_5 .gform_fields li#field_5_163,#gform_5 .gform_fields li#field_5_164,#gform_5 .gform_fields li#field_5_165,#gform_5 .gform_fields li#field_5_166,#gform_5 .gform_fields li#field_5_167{margin:0 0 15px!important;}
+#gform_5 #gform_page_5_3 .ginput_container input,#gform_5 #gform_page_5_3 .ginput_container input:focus{text-align:center;font-size:20px;font-family:GothamProRegular,sans-serif;text-transform:uppercase;background:0 0!important;box-shadow:0 0 0!important;width:100%;border:0;}
+#gform_5 #gform_page_5_3 .ginput_container_number,#gform_5 #gform_page_5_3 .ginput_container_text{width:100%;margin-left:0;}
+#gform_5 #gform_page_5_3 .ginput_container_number:before,#gform_5 #gform_page_5_3 .ginput_container_text:before{content:'Estimated Quote*:';text-align:center;width:100%;display:block;color:gray;font-weight:800;font-family:GothamProRegular,sans-serif;}
+#gform_5 #gform_page_5_3 .ginput_container_number:after,#gform_5 #gform_page_5_3 .ginput_container_text:after{content:'*Does not include taxes';text-align:center;width:100%;display:block;color:gray;font-size:14px;font-family:GothamProRegular,sans-serif;margin-bottom:35px;}
+#gform_5 #gform_page_5_3 .ginput_container.ginput_container_number input,#gform_5 #gform_page_5_3 .ginput_container.ginput_container_text input{margin:0!important;padding:0;color:#009a76!important;font-size:28px!important;}
+#gform_5 #gform_page_5_3 .ginput_container_checkbox input{right:10px;opacity:1;margin-top:0;top:5px;}
+#gform_5 #gform_page_5_3 .gform_page_footer{display:flex;align-items:center;flex-direction:column-reverse;}
+#gform_5 #gform_page_5_3 .gform_page_footer input{margin:10px 0;max-width:300px;width:100%;}
+input#input_5_123{opacity:0;-webkit-transition:450ms ease;-moz-transition:450ms ease;-o-transition:450ms ease;transition:450ms ease;}
+li#field_5_123,li#field_5_82{padding-right:0;}
+#gform_5 #gform_page_5_5 .gfield_description{margin-top:0;padding-top:0;font-style:italic;}
+#gform_5 #gform_page_5_5 .ginput_container_text input{margin-bottom:0!important;}
+#gform_5 #gform_page_5_5 .gfield_checkbox label,#gform_5 #gform_page_5_5 .gfield_radio label{background:#009a76;color:#fff!important;padding:10px;margin:0;}
+#gform_5 #gform_page_5_5 .gfield_checkbox input:checked~label,#gform_5 #gform_page_5_5 .gfield_radio input:checked~label{background:#00674f;}
+#gform_5 li#field_5_174 .gfield_list_group .gfield_list_cell:first-child:after,#gform_5 li#field_5_175 .gfield_list_group .gfield_list_cell:first-child:after{content:'';}
+#gform_5 #gform_page_5_6 .gfield_radio label{background:#009a76;color:#fff!important;padding:10px;}
+#gform_5 #gform_page_5_6 .gfield_radio input:checked~label{background:#00674f;}
+#gform_page_5_6 .gform_page_footer{padding:16px 0;}
+#gform_5 #gform_page_5_6 .gfield_description{margin-top:0;padding-top:0;font-style:italic;}
+input#input_5_16{margin-bottom:0!important;}
+li#field_5_109 .gfield_radio{justify-content:normal;}
+li#field_5_173 .gform_drop_area{width:100%;margin:0;}
+@media (min-width:481px){
+	#gform_5 #gform_page_5_2 li#field_5_118 label.gfield_label{line-height:42px;}
+}
+@media (max-width:599px){
+	#gform_5 .gform_page_footer{display:flex;align-items:center;flex-direction:column-reverse;}
+}
+@media (min-width:600px){
+	#gform_5 #gform_page_5_2 .left_label .gfield .gfield_checkbox label{height:170px;}
+	#gform_5 #gform_page_5_2 .quote_data_field{margin-bottom:83px!important;}
+	#field_5_122 .ginput_container.ginput_container_radio .gfield_radio{padding-top:3em;}
+	#gform_5 .gfield_checkbox li,#gform_5 .gfield_radio li{width:48%;}
+}
+@media (min-width:641px){
+	#gform_5 .quote_options .ginput_container{left:138%;}
+	#gform_5 #gform_preview_5_173{width:70%;margin-left:29%;}
+}
+@media (min-width:768px){
+	#gform_5 #gform_page_5_2 .gform_page_footer,#gform_5 #gform_page_5_4 .gform_page_footer,#gform_5 #gform_page_5_5 .gform_page_footer,#gform_5 #gform_page_5_6 .gform_page_footer{display:flex;justify-content:space-between;}
+	#gform_5 #input_5_1 li{width:33%;}
+}
+@media (min-width:1031px){
+	#gform_5 .gfield_list_group .gfield_list_cell:first-child:after{content:'x';position:absolute;bottom:0;right:-12px;}
+	#gform_5 .gfield_list_group .gfield_list_cell:first-child{position:relative;}
+	#gform_5 #gform_page_5_2 .ginput_container_checkbox input~label:after{display:block;position:absolute;font-family:FontAwesome;content:'\f00c';color:#009975;right:0;top:-10px;font-size:14px;-webkit-transform-origin:50%;-moz-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-transform:scale(.7);-moz-transform:scale(.7);-ms-transform:scale(.7);transform:scale(.7);transition-duration:.4s;transition-delay:0s;opacity:0;border:1px solid #009975;border-radius:15px;width:24px;line-height:22px;height:24px;text-align:center;}
+	#gform_5 .ginput_container_number,#gform_5 .ginput_container_select{margin-top:0;width:70%;margin-left:30%;}
+	#gform_5 #gform_page_5_2 .quote_data_field{margin-top:45px;height:50px;}
+	#gform_5 #gform_page_5_2 .left_label .quote_data_field label{width:25%;text-align:right;display:block!important;}
+}
+/*! CSS Used from: https://www.printrenegades.com/wp-content/uploads/pum/pum-site-styles.css?generated=1587763357&ver=1.10.1 ; media=all */
+@media all{
+	.pum-container .pum-content>:last-child{margin-bottom:0;}
+	.pum-content{background:0 0;border:none;bottom:auto;clear:none;cursor:default;float:none;font-family:inherit;font-size:medium;font-style:normal;font-weight:400;height:auto;left:auto;letter-spacing:normal;line-height:normal;max-height:none;max-width:none;min-height:0;min-width:0;overflow:visible;position:static;right:auto;text-align:left;text-decoration:none;text-indent:0;text-transform:none;top:auto;visibility:visible;white-space:normal;width:auto;z-index:auto;}
+	.pum-content{position:relative;z-index:1;}
+	.pum-overlay *,.pum-overlay :after,.pum-overlay :before{box-sizing:border-box;}
+	.pum-container.pum-responsive img{max-width:100%;height:auto;}
+	.pum-theme-1553 .pum-content,.pum-theme-lightbox .pum-content{color:#000000;font-family:inherit;}
+}
+/*! CSS Used keyframes */
+@keyframes fadein{from{opacity:0;-ms-transform:scale(.2);transform:scale(.2);}to{opacity:1;-ms-transform:scale(1);transform:scale(1);}}
+@-moz-keyframes fadein{from{opacity:0;-moz-transform:scale(.2);}to{opacity:1;-moz-transform:scale(1);}}
+@-webkit-keyframes fadein{from{opacity:0;-webkit-transform:scale(.2);}to{opacity:1;-webkit-transform:scale(1);}}
+@-o-keyframes fadein{from{opacity:0;-o-transform:scale(.2);}to{opacity:1;-o-transform:scale(1);}}
+/*! CSS Used fontfaces */
+@font-face{font-family:"GothamProRegular";src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.eot");src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.eot#iefix") format("embedded-opentype"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");font-style:normal;font-weight:normal;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1UAw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0ddc1UAw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Vdc1UAw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0adc1UAw.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Wdc1UAw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Xdc1UAw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Zdc0.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:"GothamProMedium";src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.eot");src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.eot#iefix") format("embedded-opentype"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.woff") format("woff"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");font-style:normal;font-weight:normal;}
+@font-face{font-family:'FontAwesome';src:url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.eot?v=4.7.0');src:url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.eot#iefix&v=4.7.0') format('embedded-opentype'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:"GothamProBold";src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.eot");src:url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.eot#iefix") format("embedded-opentype"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.woff") format("woff"), url("https://www.printrenegades.com/wp-content/themes/printrenegadesdev/fonts/GothamProBold/GothamProBold.ttf") format("truetype");font-style:normal;font-weight:normal;}
+
+
+
+.align_center {
+	text-align: center;
+}
+.padding-right_none {
+	padding-right: 0;
+}
