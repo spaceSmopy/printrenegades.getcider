@@ -194,7 +194,7 @@ $(document).ready(function () {
         $('.product-checked').hide();
 
         $('.result-slide .sectionTitle').text(currentSection.title)
-        $('.result-slide .orderSumInput').val(order.sum + '$')
+        $('.result-slide .orderSumInput').val('$' + order.sum )
         $('.result-slide .sectionTitleWrapper style').remove();
         $('.result-slide .sectionTitleWrapper').html('<style type="text/css">\n' +
             '                                            .apparel-title:before{\n' +
@@ -422,8 +422,8 @@ $(document).ready(function () {
         });
         return returnData;
     }
-
-    var basePrice = 30 + Math.floor(Math.random() * 100);
+    var basePrice = null;
+    // var basePrice = 30 + Math.floor(Math.random() * 100);
     var currentSection = {};
     var orderData = {};
     var contactData;

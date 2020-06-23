@@ -28,13 +28,13 @@ define('WP_AUTO_UPDATE_CORE', 'minor');// This setting is required to make sure 
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', "admin_print" );
+define( 'DB_NAME', "printrenegades.loc" );
 
 /** MySQL database username */
-define( 'DB_USER', "admin_print" );
+define( 'DB_USER', "root" );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', "fT3sf_36" );
+define( 'DB_PASSWORD', "" );
 
 /** MySQL hostname */
 define( 'DB_HOST', "localhost" );

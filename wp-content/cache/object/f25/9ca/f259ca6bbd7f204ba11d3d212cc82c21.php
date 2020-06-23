@@ -1,11 +1,0 @@
-½ñ^<?php exit; ?>a:1:{s:7:"content";O:8:"stdClass":24:{s:2:"ID";i:167;s:11:"post_author";s:1:"1";s:9:"post_date";s:19:"2017-03-03 01:22:46";s:13:"post_date_gmt";s:19:"2017-03-03 01:22:46";s:12:"post_content";s:1513:"<h3>About Us</h3>
-(everything that youâ€™ve ever wanted to know about Print Renegades)
-
-&nbsp;
-
-Since 2008, Print Renegades has been committed to providing unparalleled screen printing services to hundreds of clients throughout Los Angeles. Locally owned and operated, our decision-makers are on-site and available, allowing us to offer our clients flexibility that large corporations cannot match.
-
-We attribute our continuing success to the caliber of the Print Renegades team that is consistently diligent and hard working. This is because each person at Print Renegades has continued involvement with music and the arts, and we care for each project as if it were our own. We don't just print your job like other screen printing drones, we manually press each piece to the highest quality standards. We believe in quality over quantity, people before profit, and respect over fame.
-
-Through this, we are dedicated to creating a new service standard, to ensure your job is delivered on time, on budget and to your complete satisfaction. It is our promise that each and every project we work on for you will be put through a 14-step service process that starts from the moment you contact us for a job to the moment it is delivered into your hands. Itâ€™s our intent to provide an alternative prospective to the conventional world of screen printing. Print Renegades is where high end meets carefree independent lifestyle.
-<p style="text-align: center;">https://www.youtube.com/watch?v=tdWI2-AMFJ0</p>";s:10:"post_title";s:8:"About Us";s:12:"post_excerpt";s:0:"";s:11:"post_status";s:7:"publish";s:14:"comment_status";s:6:"closed";s:11:"ping_status";s:6:"closed";s:13:"post_password";s:0:"";s:9:"post_name";s:8:"about-us";s:7:"to_ping";s:0:"";s:6:"pinged";s:0:"";s:13:"post_modified";s:19:"2020-05-14 12:56:05";s:17:"post_modified_gmt";s:19:"2020-05-14 12:56:05";s:21:"post_content_filtered";s:0:"";s:11:"post_parent";i:0;s:4:"guid";s:48:"https://printrenegades.getcider.com/?page_id=167";s:10:"menu_order";i:0;s:9:"post_type";s:4:"page";s:14:"post_mime_type";s:0:"";s:13:"comment_count";s:1:"0";s:6:"filter";s:3:"raw";}}
